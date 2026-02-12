@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
 import RevealOnScroll from '@/components/RevealOnScroll';
+import RoomCards from './RoomCards';
 
 export const metadata = {
     title: 'Stay & Experience',
@@ -69,8 +70,22 @@ export default function RetreatsPage() {
                 </div>
             </section>
 
+            {/* ═══════════ ROOM BOOKING ═══════════ */}
+            <section style={{ padding: 'var(--space-24) 0' }} id="book-room">
+                <div className="container">
+                    <RevealOnScroll className="text-center mb-10">
+                        <p className="text-overline">Book Your Stay</p>
+                        <h2 className="text-display" style={{ marginTop: 'var(--space-4)' }}>Choose Your<br /><em className="text-accent">Room</em></h2>
+                        <p style={{ color: 'var(--text-secondary)', marginTop: 'var(--space-4)', maxWidth: '540px', margin: 'var(--space-4) auto 0', lineHeight: 'var(--leading-relaxed)' }}>
+                            From rustic shared spaces to private tree houses — each stay immerses you in the rhythm of the farm.
+                        </p>
+                    </RevealOnScroll>
+                    <RoomCards />
+                </div>
+            </section>
+
             {/* ORGANIC RETREAT */}
-            <section style={{ padding: 'var(--space-24) 0' }}>
+            <section className="section-cream" style={{ padding: 'var(--space-24) 0' }}>
                 <div className="container-text">
                     <RevealOnScroll className="text-center">
                         <p className="text-overline" style={{ marginBottom: 'var(--space-4)' }}>Organic Retreat</p>
@@ -85,7 +100,7 @@ export default function RetreatsPage() {
             </section>
 
             {/* CACAO TRAIL */}
-            <section className="section-linen" style={{ padding: 'var(--space-24) 0' }}>
+            <section style={{ padding: 'var(--space-24) 0' }}>
                 <div className="container">
                     <div className="grid-editorial">
                         <RevealOnScroll direction="left">
@@ -104,7 +119,7 @@ export default function RetreatsPage() {
             </section>
 
             {/* FACILITIES */}
-            <section style={{ padding: 'var(--space-24) 0' }}>
+            <section className="section-linen" style={{ padding: 'var(--space-24) 0' }}>
                 <div className="container">
                     <RevealOnScroll className="text-center mb-10">
                         <p className="text-overline">Facilities &amp; Activities</p>

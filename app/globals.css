@@ -2008,3 +2008,311 @@ ol {
         grid-template-columns: 1fr;
     }
 }
+
+
+/* ═══════════════════════════════════════
+   GREEN HEADING TYPOGRAPHY REFINEMENTS
+   ═══════════════════════════════════════ */
+
+/* All h2 elements default to serif with a subtle green tint */
+h2 {
+    color: var(--text-primary);
+    font-family: var(--font-serif);
+    font-weight: var(--weight-light);
+}
+
+/* The full green italic heading pattern (olive-green serif italic) */
+.text-accent-heading {
+    font-family: var(--font-serif);
+    font-size: var(--text-display);
+    font-weight: var(--weight-light);
+    font-style: italic;
+    color: var(--brand-green);
+    line-height: var(--leading-tight);
+}
+
+/* Body text under headings: warm gray with relaxed line height */
+.prose p,
+.section-body-text {
+    color: var(--text-secondary);
+    line-height: var(--leading-relaxed);
+    font-family: var(--font-sans);
+}
+
+/* Make .text-display headings use serif consistently */
+.text-display {
+    font-family: var(--font-serif);
+    font-size: clamp(var(--text-2xl), 5vw, var(--text-4xl));
+    font-weight: var(--weight-light);
+    line-height: var(--leading-tight);
+}
+
+/* Page header h2 in dark overlays */
+.section-dark h2 .text-accent,
+.section-dark .text-accent {
+    color: var(--brand-green-light);
+}
+
+
+/* ═══════════════════════════════════════
+   ROOM CARDS
+   ═══════════════════════════════════════ */
+.room-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-8);
+}
+
+.room-card {
+    background: var(--surface-primary);
+    border: 1px solid var(--border-light);
+    overflow: hidden;
+    transition: all 0.4s var(--ease-organic);
+    display: flex;
+    flex-direction: column;
+}
+
+.room-card:hover {
+    border-color: var(--brand-green);
+    box-shadow: var(--shadow-md);
+    transform: translateY(-3px);
+}
+
+.room-card__img {
+    aspect-ratio: 16/10;
+    overflow: hidden;
+    position: relative;
+}
+
+.room-card__img img {
+    transition: transform 0.6s var(--ease-organic);
+}
+
+.room-card:hover .room-card__img img {
+    transform: scale(1.04);
+}
+
+.room-card__content {
+    padding: var(--space-6);
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: var(--space-5);
+}
+
+.room-card__info {
+    flex: 1;
+}
+
+.room-card__name {
+    font-family: var(--font-serif);
+    font-size: var(--text-2xl);
+    font-weight: var(--weight-light);
+    color: var(--text-primary);
+    margin-bottom: var(--space-3);
+    line-height: var(--leading-tight);
+}
+
+.room-card__desc {
+    font-size: var(--text-sm);
+    color: var(--text-secondary);
+    line-height: var(--leading-relaxed);
+    margin-bottom: var(--space-4);
+}
+
+.room-card__meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: var(--space-4);
+    border-top: 1px solid var(--border-lighter);
+}
+
+.room-card__price {
+    font-family: var(--font-serif);
+    font-size: var(--text-xl);
+    font-weight: var(--weight-medium);
+    color: var(--brand-green);
+    font-style: italic;
+}
+
+.room-card__capacity {
+    font-size: var(--text-xs);
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-wider);
+    color: var(--text-muted);
+}
+
+.room-card__book {
+    width: 100%;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    .room-cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* ═══════════════════════════════════════
+   BOOKING FORM
+   ═══════════════════════════════════════ */
+.booking-form {
+    background: var(--surface-secondary);
+    padding: var(--space-6);
+    border: 1px solid var(--border-light);
+    animation: bookingSlideIn 0.35s var(--ease-smooth) forwards;
+}
+
+@keyframes bookingSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.booking-form__header {
+    margin-bottom: var(--space-5);
+    padding-bottom: var(--space-4);
+    border-bottom: 1px solid var(--border-light);
+}
+
+.booking-form__title {
+    font-family: var(--font-serif);
+    font-size: var(--text-xl);
+    font-weight: var(--weight-light);
+    font-style: italic;
+    color: var(--brand-green);
+    margin-top: var(--space-2);
+    margin-bottom: var(--space-1);
+}
+
+.booking-form__price {
+    font-size: var(--text-sm);
+    color: var(--text-muted);
+}
+
+.booking-form__fields {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+}
+
+.booking-form__field {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+}
+
+.booking-form__field label {
+    font-size: var(--text-xs);
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-wider);
+    color: var(--text-muted);
+    font-weight: var(--weight-medium);
+}
+
+.booking-form__field input,
+.booking-form__field select {
+    padding: var(--space-3) var(--space-4);
+    border: 1px solid var(--border-light);
+    background: var(--surface-primary);
+    font-size: var(--text-base);
+    color: var(--text-primary);
+    outline: none;
+    transition: border-color 0.3s;
+    font-family: var(--font-sans);
+}
+
+.booking-form__field input:focus,
+.booking-form__field select:focus {
+    border-color: var(--brand-green);
+}
+
+.booking-form__row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-4);
+}
+
+.booking-form__actions {
+    display: flex;
+    gap: var(--space-3);
+    margin-top: var(--space-5);
+}
+
+.booking-form__submit {
+    flex: 1;
+    justify-content: center;
+}
+
+@media (max-width: 480px) {
+    .booking-form__row {
+        grid-template-columns: 1fr;
+    }
+
+    .booking-form__actions {
+        flex-direction: column;
+    }
+}
+
+
+/* ═══════════════════════════════════════
+   BOOKING CONFIRMATION
+   ═══════════════════════════════════════ */
+.booking-confirmation {
+    text-align: center;
+    padding: var(--space-8) var(--space-6);
+    background: var(--surface-secondary);
+    border: 1px solid var(--brand-green-light);
+    animation: bookingSlideIn 0.35s var(--ease-smooth) forwards;
+}
+
+.booking-confirmation__icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: var(--brand-green);
+    color: #fff;
+    font-size: var(--text-2xl);
+    font-weight: var(--weight-semi);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto var(--space-5);
+}
+
+.booking-confirmation__title {
+    font-family: var(--font-serif);
+    font-size: var(--text-2xl);
+    font-weight: var(--weight-light);
+    font-style: italic;
+    color: var(--brand-green);
+    margin-bottom: var(--space-3);
+}
+
+.booking-confirmation__text {
+    font-size: var(--text-base);
+    color: var(--text-secondary);
+    line-height: var(--leading-relaxed);
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.booking-confirmation__text strong {
+    color: var(--text-primary);
+    font-weight: var(--weight-medium);
+}
+
+.booking-confirmation__details {
+    font-size: var(--text-sm);
+    color: var(--text-muted);
+    margin-top: var(--space-4);
+    letter-spacing: var(--tracking-wide);
+}

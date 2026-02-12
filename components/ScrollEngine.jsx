@@ -5,13 +5,14 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Lenis from 'lenis';
 
-gsap.registerPlugin(ScrollTrigger);
-
 export default function ScrollEngine() {
     const lenisRef = useRef(null);
     const rafCbRef = useRef(null);
 
     useEffect(() => {
+        // Register plugin inside useEffect so it doesn't persist at module scope
+        gsap.registerPlugin(ScrollTrigger);
+
         // Kill any stale triggers from previous mounts
         ScrollTrigger.getAll().forEach((t) => t.kill());
         gsap.killTweensOf('*');
@@ -34,25 +35,48 @@ export default function ScrollEngine() {
 
         // Small delay to let DOM settle after hydration
         const initTimer = setTimeout(() => {
-            initHero();
-            initTimeline();
-            initPinnedLand();
-            initBentoAnimations();
-            initJourneyPanels();
-            initSplitScroll();
-            initTextReveal();
-            initClosing();
+            // Wrap each init in try/catch for defensive safety
+            const inits = [
+                initHero,
+                initTimeline,
+                initPinnedLand,
+                initBentoAnimations,
+                initJourneyPanels,
+                initSplitScroll,
+                initTextReveal,
+                initClosing,
+            ];
+            inits.forEach((fn) => {
+                try {
+                    fn();
+                } catch (err) {
+                    console.warn(`[ScrollEngine] ${fn.name} failed:`, err);
+                }
+            });
             ScrollTrigger.refresh();
         }, 100);
 
         return () => {
             clearTimeout(initTimer);
-            lenis.destroy();
+
+            // Destroy Lenis
+            try {
+                lenis.destroy();
+            } catch (err) {
+                console.warn('[ScrollEngine] Lenis destroy failed:', err);
+            }
+
+            // Kill all GSAP ScrollTriggers and tweens
             ScrollTrigger.getAll().forEach((t) => t.kill());
             gsap.killTweensOf('*');
             if (rafCbRef.current) {
                 gsap.ticker.remove(rafCbRef.current);
             }
+
+            // Defensive cleanup: remove Lenis classes from <html>
+            const html = document.documentElement;
+            html.classList.remove('lenis', 'lenis-smooth', 'lenis-stopped');
+            html.style.removeProperty('height');
         };
     }, []);
 
