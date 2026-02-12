@@ -4,6 +4,7 @@ import Nav from '@/components/Nav';
 import ScrollEngine from '@/components/ScrollEngine';
 import BentoProducts from '@/components/BentoProducts';
 import FooterMinimal from '@/components/FooterMinimal';
+import HeroSlider from '@/components/HeroSlider';
 
 export default function HomePage() {
   return (
@@ -14,14 +15,7 @@ export default function HomePage() {
       {/* ═══════════ ACT 1 · HERO ═══════════ */}
       <section className="act-hero" id="act-1">
         <div className="act-hero__bg gpu">
-          <Image
-            src="https://varanashi.com/wp-content/uploads/2019/06/DSC_8373-860x500.jpg"
-            alt="Varanashi organic farm aerial view"
-            fill
-            priority
-            style={{ objectFit: 'cover', filter: 'saturate(0.85) brightness(0.75) contrast(1.05)' }}
-            sizes="100vw"
-          />
+          <HeroSlider />
         </div>
         <div className="act-hero__overlay"></div>
         <div className="act-hero__content">
@@ -245,14 +239,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ═══════════ ACT 7 · PHILOSOPHY ═══════════ */}
-      <section className="act-philosophy" id="act-7">
-        <div className="act-philosophy__text">
-          {"We aim not to conquer the land but to listen to it. To simulate the diversity of natural forests in our farming. To recycle what the earth gives us back into the earth. Six generations have understood this — that the soil is not a resource to be extracted, but a partner to be respected. Every compost heap, every pond, every tree that was never cut is a sentence in a conversation between this family and this land that has lasted two hundred years and will last two hundred more."
-            .split(/\s+/)
-            .map((word, i) => (<span key={i} className="word">{word} </span>))}
-        </div>
-      </section>
+
 
       {/* ═══════════ ACT 8 · CLOSING ═══════════ */}
       <section className="act-close" id="act-8">

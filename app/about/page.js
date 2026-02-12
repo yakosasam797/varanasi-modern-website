@@ -83,7 +83,7 @@ export default function AboutPage() {
             </section>
 
             {/* THE NAME */}
-            <section className="section-linen" style={{ padding: 'var(--space-12) 0' }}>
+            <section className="section-linen" style={{ padding: 'var(--space-24) 0' }}>
                 <div className="container-text">
                     <RevealOnScroll className="text-center">
                         <p className="text-overline" style={{ marginBottom: 'var(--space-4)' }}>The Name</p>

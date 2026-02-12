@@ -163,7 +163,8 @@ function initTimeline() {
     const eras = track.querySelectorAll('.act-timeline__era');
     const totalWidth = eras.length * window.innerWidth;
 
-    gsap.to(track, {
+    // Main horizontal scroll tween
+    const scrollTween = gsap.to(track, {
         x: () => -(totalWidth - window.innerWidth),
         ease: 'none',
         scrollTrigger: {
@@ -183,22 +184,29 @@ function initTimeline() {
         },
     });
 
+    // Per-era text reveal using containerAnimation for proper horizontal triggering
     eras.forEach((era) => {
         const year = era.querySelector('.act-timeline__year');
         const title = era.querySelector('.act-timeline__era-title');
         const text = era.querySelector('.act-timeline__era-text');
+        const overline = era.querySelector('.text-overline');
 
-        gsap.from([year, title, text].filter(Boolean), {
+        const targets = [overline, year, title, text].filter(Boolean);
+        // Ensure elements are visible by default
+        gsap.set(targets, { opacity: 1, y: 0 });
+
+        gsap.from(targets, {
             opacity: 0,
             y: 40,
-            stagger: 0.15,
+            stagger: 0.12,
             duration: 0.8,
             ease: 'power3.out',
             scrollTrigger: {
                 trigger: era,
-                start: 'left center',
+                start: 'left 80%',
+                end: 'left 20%',
                 toggleActions: 'play none none reverse',
-                horizontal: true,
+                containerAnimation: scrollTween,
             },
         });
     });

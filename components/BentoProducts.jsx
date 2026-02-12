@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import Image from 'next/image';
 
 const PRODUCTS = [
@@ -92,15 +92,29 @@ const PRODUCTS = [
 
 export default function BentoProducts() {
     const [active, setActive] = useState(null);
+    const [detailOffset, setDetailOffset] = useState(0);
+    const gridRef = useRef(null);
+    const detailRef = useRef(null);
 
-    const showDetail = (key) => setActive(key);
+    const showDetail = (key, e) => {
+        setActive(key);
+        // Calculate the vertical offset of the hovered cell relative to the grid
+        if (gridRef.current) {
+            const cell = e.currentTarget;
+            const gridRect = gridRef.current.getBoundingClientRect();
+            const cellRect = cell.getBoundingClientRect();
+            // Position detail panel at the same vertical level as the cell
+            const offset = cellRect.top - gridRect.top;
+            setDetailOffset(offset);
+        }
+    };
     const resetDetail = () => setActive(null);
 
     const activeProduct = PRODUCTS.find((p) => p.key === active);
 
     return (
         <div className="bento-products" onMouseLeave={resetDetail}>
-            <div className="bento-products__grid">
+            <div className="bento-products__grid" ref={gridRef}>
                 {PRODUCTS.map((product) => {
                     let cellClass = 'bento-cell';
                     if (product.wide) cellClass += ' bento-cell--wide';
@@ -112,7 +126,7 @@ export default function BentoProducts() {
                             key={product.key}
                             className={cellClass}
                             data-product={product.key}
-                            onMouseEnter={() => showDetail(product.key)}
+                            onMouseEnter={(e) => showDetail(product.key, e)}
                         >
                             <Image
                                 src={product.img}
@@ -127,7 +141,12 @@ export default function BentoProducts() {
                 })}
             </div>
 
-            <div className="bento-products__detail" id="bento-detail">
+            <div
+                className="bento-products__detail"
+                id="bento-detail"
+                ref={detailRef}
+                style={{ transform: `translateY(${detailOffset}px)` }}
+            >
                 {!activeProduct && (
                     <div className="bento-detail__default" id="bento-default">
                         <p
