@@ -25,7 +25,7 @@ export default function HomePage() {
         </div>
         <div className="act-hero__overlay"></div>
         <div className="act-hero__content">
-          <h1 className="act-hero__title">Varanashi</h1>
+          <h1 className="act-hero__title">{"Varanashi".split("").map((char, i) => (<span key={i} className="char">{char}</span>))}</h1>
           <p className="act-hero__sub">
             Six generations have tended this soil.<br />
             The land remembers every hand.
@@ -97,13 +97,13 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ═══════════ ACT 3 · THE LAND ═══════════ */}
+      {/* ═══════════ ACT 3 · THE LAND (PINNED IMAGE + SCROLLING TEXT) ═══════════ */}
       <section className="act-land" id="act-3">
         <div className="act-land__wrapper">
           <div className="act-land__image gpu">
             <Image
-              src="https://varanashi.com/wp-content/uploads/2019/06/IMG_0605-860x500.jpg"
-              alt="Varanashi farmland"
+              src="https://varanashi.com/wp-content/uploads/2019/06/DSC_8373-860x500.jpg"
+              alt="Varanashi organic farm"
               fill
               style={{ objectFit: 'cover' }}
               sizes="55vw"
@@ -112,40 +112,42 @@ export default function HomePage() {
           <div className="act-land__text-col">
             <div className="act-land__block">
               <p className="text-overline" style={{ marginBottom: 'var(--space-5)' }}>
-                The Canvas
+                Our Mission
               </p>
               <div className="text-accent-lg">
-                A hundred acres where<br />
-                the forest still decides<br />
-                what grows.
+                Premium Certified<br />
+                Organic Farm Inputs
               </div>
               <p>
-                Varanashi Organic Farms extend across 100 acres over two
-                properties, with seven irrigation ponds, a river, and a rivulet.
-                Sixty percent remains untouched forest — the farm doesn&apos;t
-                compete with nature, it works within it.
+                We aim at simulating the diversity and eco-friendliness of
+                natural forests in farming and farm practices. During the last
+                few decades, Varanashi Organizations have contributed greatly
+                towards the promotion of organic and sustainable agriculture.
               </p>
             </div>
             <div className="act-land__block">
               <p className="text-overline" style={{ marginBottom: 'var(--space-5)' }}>
-                The Method
+                Experience
               </p>
-              <h3>Multi-Story Cultivation</h3>
+              <h3>Organic Retreats</h3>
               <p>
-                Arecanut, Coconut, Cocoa, Nutmeg, Banana, Black Pepper, and
-                Jackfruit grow in layered harmony — a multi-story system where
-                each crop occupies its own stratum of light and shade.
+                Here at Varanashi we take a truly holistic view of personal
+                well-being. Nutrition, exercise, lifestyle, and conscious
+                choices all go into leading a happier and healthier life. Our
+                organic retreats reflect this holistic approach on a
+                centuries-old farm.
               </p>
             </div>
             <div className="act-land__block">
               <p className="text-overline" style={{ marginBottom: 'var(--space-5)' }}>
-                The Water
+                From Our Soil
               </p>
-              <h3>Seven Ponds, One River</h3>
+              <h3>What We Produce</h3>
               <p>
-                Seven ponds capture the monsoons, feed the crops, and offer
-                year-round natural swimming with A+ water quality. The river
-                Phalguni adjoins the eastern boundary.
+                Every product carries the story of our soil — grown organically,
+                processed with care, delivered with the trust of six generations.
+                From cacao and spices to honey and rice, our produce reflects
+                two centuries of stewardship.
               </p>
             </div>
           </div>
@@ -246,13 +248,9 @@ export default function HomePage() {
       {/* ═══════════ ACT 7 · PHILOSOPHY ═══════════ */}
       <section className="act-philosophy" id="act-7">
         <div className="act-philosophy__text">
-          We aim not to conquer the land but to listen to it. To simulate the
-          diversity of natural forests in our farming. To recycle what the earth
-          gives us back into the earth. Six generations have understood this —
-          that the soil is not a resource to be extracted, but a partner to be
-          respected. Every compost heap, every pond, every tree that was never cut
-          is a sentence in a conversation between this family and this land that
-          has lasted two hundred years and will last two hundred more.
+          {"We aim not to conquer the land but to listen to it. To simulate the diversity of natural forests in our farming. To recycle what the earth gives us back into the earth. Six generations have understood this — that the soil is not a resource to be extracted, but a partner to be respected. Every compost heap, every pond, every tree that was never cut is a sentence in a conversation between this family and this land that has lasted two hundred years and will last two hundred more."
+            .split(/\s+/)
+            .map((word, i) => (<span key={i} className="word">{word} </span>))}
         </div>
       </section>
 

@@ -22,7 +22,10 @@ const NAV_LINKS = [
     },
     { href: '/shop', label: 'Shop' },
     { href: '/retreats', label: 'Stay & Experience' },
+    { href: '/fitness', label: 'Fitness' },
+    { href: '/volunteer', label: 'Volunteer' },
     { href: '/outreach', label: 'Learn' },
+    { href: '/news', label: 'News' },
     { href: '/contact', label: 'Contact' },
 ];
 
@@ -34,6 +37,7 @@ const MOBILE_LINKS = [
     { href: '/fitness', label: 'Fitness' },
     { href: '/volunteer', label: 'Volunteer' },
     { href: '/outreach', label: 'Learn' },
+    { href: '/news', label: 'News' },
     { href: '/contact', label: 'Contact' },
 ];
 
@@ -82,6 +86,13 @@ export default function Nav({ isHomepage = false }) {
         return () => window.removeEventListener('scroll', onScroll);
     }, [isHomepage]);
 
+    // Cleanup body overflow on unmount to prevent scroll-lock leak
+    useEffect(() => {
+        return () => {
+            document.body.style.overflow = '';
+        };
+    }, []);
+
     const toggleMobile = () => {
         setMobileOpen((prev) => {
             document.body.style.overflow = !prev ? 'hidden' : '';
@@ -105,7 +116,8 @@ export default function Nav({ isHomepage = false }) {
         { href: '/shop', label: 'Shop' },
         { href: '/retreats', label: 'Stay' },
         { href: '/fitness', label: 'Movement' },
-        { href: '/outreach', label: 'Outreach' },
+        { href: '/volunteer', label: 'Volunteer' },
+        { href: '/news', label: 'News' },
         { href: '/contact', label: 'Contact' },
     ];
 

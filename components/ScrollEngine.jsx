@@ -9,8 +9,13 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function ScrollEngine() {
     const lenisRef = useRef(null);
+    const rafCbRef = useRef(null);
 
     useEffect(() => {
+        // Kill any stale triggers from previous mounts
+        ScrollTrigger.getAll().forEach((t) => t.kill());
+        gsap.killTweensOf('*');
+
         // ── Lenis Smooth Scroll ──
         const lenis = new Lenis({
             duration: 1.4,
@@ -21,11 +26,14 @@ export default function ScrollEngine() {
         lenisRef.current = lenis;
 
         lenis.on('scroll', ScrollTrigger.update);
-        gsap.ticker.add((time) => lenis.raf(time * 1000));
+
+        const rafCb = (time) => lenis.raf(time * 1000);
+        rafCbRef.current = rafCb;
+        gsap.ticker.add(rafCb);
         gsap.ticker.lagSmoothing(0);
 
-        // Small delay to let DOM settle
-        requestAnimationFrame(() => {
+        // Small delay to let DOM settle after hydration
+        const initTimer = setTimeout(() => {
             initHero();
             initTimeline();
             initPinnedLand();
@@ -34,12 +42,17 @@ export default function ScrollEngine() {
             initSplitScroll();
             initTextReveal();
             initClosing();
-        });
+            ScrollTrigger.refresh();
+        }, 100);
 
         return () => {
+            clearTimeout(initTimer);
             lenis.destroy();
             ScrollTrigger.getAll().forEach((t) => t.kill());
-            gsap.ticker.remove(lenis.raf);
+            gsap.killTweensOf('*');
+            if (rafCbRef.current) {
+                gsap.ticker.remove(rafCbRef.current);
+            }
         };
     }, []);
 
@@ -53,18 +66,11 @@ function initHero() {
 
     const bg = hero.querySelector('.act-hero__bg');
     const content = hero.querySelector('.act-hero__content');
-    const title = hero.querySelector('.act-hero__title');
 
-    if (title && !title.querySelector('.char')) {
-        const text = title.textContent;
-        title.innerHTML = text
-            .split('')
-            .map((char) =>
-                char === ' ' ? ' ' : `<span class="char">${char}</span>`
-            )
-            .join('');
-
-        gsap.to('.act-hero__title .char', {
+    // Animate pre-rendered character spans (no more innerHTML mutation)
+    const chars = hero.querySelectorAll('.act-hero__title .char');
+    if (chars.length) {
+        gsap.to(chars, {
             opacity: 1,
             duration: 0.06,
             stagger: 0.04,
@@ -322,16 +328,12 @@ function initSplitScroll() {
 
 /* ─── ACT 7 · TEXT REVEAL ─── */
 function initTextReveal() {
+    // Animate pre-rendered word spans (no more innerHTML mutation)
     const container = document.querySelector('.act-philosophy__text');
     if (!container) return;
 
-    const text = container.textContent.trim();
-    container.innerHTML = text
-        .split(/\s+/)
-        .map((word) => `<span class="word">${word}</span>`)
-        .join(' ');
-
     const words = container.querySelectorAll('.word');
+    if (!words.length) return;
 
     ScrollTrigger.create({
         trigger: '.act-philosophy',
