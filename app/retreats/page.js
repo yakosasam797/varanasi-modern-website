@@ -2,12 +2,11 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
-import RevealOnScroll from '@/components/RevealOnScroll';
 import RoomCards from './RoomCards';
 
 export const metadata = {
-    title: 'Stay & Experience',
-    description: 'Stay at Varanashi — tree houses, mud cottages, farm stays, organic retreats, and cacao trails on a centuries-old organic farm.',
+    title: 'Retreats - Varanashi',
+    description: 'Stay at Varanashi — tree houses, farm stays, organic retreats, cacao trails, and adventure on a centuries-old organic farm.',
 };
 
 export default function RetreatsPage() {
@@ -15,175 +14,220 @@ export default function RetreatsPage() {
         <>
             <Nav />
 
-            <section className="page-header">
-                <div className="page-header-bg">
-                    <Image src="https://varanashi.com/wp-content/uploads/2019/06/DSC5250-860x500.jpg" alt="Devadaru Tree House among the canopy" fill style={{ objectFit: 'cover', filter: 'brightness(0.65) saturate(0.8)' }} sizes="100vw" priority />
+            {/* ═══════════ HERO ═══════════ */}
+            <section className="sp-hero">
+                <div className="sp-hero__bg">
+                    <Image src="https://varanashi.com/wp-content/uploads/2019/06/IMG_4466_-1-860x500.jpg" alt="Tree house at Varanashi" fill sizes="100vw" priority />
                 </div>
-                <div className="page-header-overlay"></div>
-                <div className="page-header-content">
-                    <RevealOnScroll><p className="text-overline">Stay &amp; Experience</p></RevealOnScroll>
-                    <RevealOnScroll><h1>At Home in the Trees</h1></RevealOnScroll>
-                    <RevealOnScroll><p>Comfort and proximity to nature, combined thoughtfully on a centuries-old organic farm.</p></RevealOnScroll>
+                <div className="sp-hero__content">
+                    <h1 className="sp-hero__title">Retreats</h1>
+                    <p className="sp-hero__subtitle">Comfort and proximity to nature, combined thoughtfully on a centuries-old organic farm.</p>
                 </div>
             </section>
 
-            {/* TREE HOUSES */}
-            <section style={{ padding: 'var(--space-24) 0' }}>
-                <div className="container">
-                    <div className="grid-editorial">
-                        <RevealOnScroll direction="left">
-                            <div className="img-editorial">
-                                <Image src="https://varanashi.com/wp-content/uploads/2019/06/DSC5250-860x500.jpg" alt="Devadaru Tree House" width={860} height={500} style={{ width: '100%', height: 'auto' }} />
+            {/* ═══════════ AT HOME IN THE TREES ═══════════ */}
+            <section className="sp-section">
+                <div className="sp-section__inner">
+                    <div className="sp-split">
+                        <div className="sp-split__image">
+                            <Image src="https://varanashi.com/wp-content/uploads/2019/06/IMG_4466_-1-860x500.jpg" alt="Devadaru Tree House" fill sizes="50vw" />
+                        </div>
+                        <div className="sp-split__text">
+                            <p className="sp-overline">Tree Houses</p>
+                            <h2 className="sp-heading">at Home in the Trees</h2>
+                            <div className="sp-prose">
+                                <p>Few places come as close to so perfectly combining comfort and proximity to nature as our two tree houses, located in different parts of the property and each providing ultimate privacy for up to four guests.</p>
+                                <p>None of the trees has been pierced in the construction and their roots continue to grow naturally. For the building we used hardwood from our farm, including teak, rosewood, acacia, and jackfruit timber. The result is a stunning and unshakeable testament to the beauty that arises when humans work with, rather than against, nature…</p>
                             </div>
-                        </RevealOnScroll>
-                        <RevealOnScroll direction="right" className="prose">
-                            <p className="text-overline" style={{ marginBottom: 'var(--space-4)' }}>Tree Houses</p>
-                            <h2>Where Humans Work<br /><em className="text-accent">With Nature</em></h2>
-                            <p className="drop-cap">Few places come as close to so perfectly combining comfort and proximity to nature as our two tree houses, located in different parts of the property and each providing ultimate privacy for up to four guests.</p>
-                            <p>None of the trees has been pierced in the construction and their roots continue to grow naturally. For the building we used hardwood from our farm, including teak, rosewood, acacia, and jackfruit timber. The result is a stunning and unshakeable testament to the beauty that arises when humans work with, rather than against, nature…</p>
-                            <div style={{ marginTop: 'var(--space-6)' }}>
-                                <span style={{ color: 'var(--color-moss)', fontSize: 'var(--text-lg)' }}>₹10,000 / night</span>
-                            </div>
-                        </RevealOnScroll>
+                        </div>
                     </div>
                 </div>
             </section>
 
-            {/* FARM STAY */}
-            <section className="section-cream" style={{ padding: 'var(--space-24) 0' }}>
-                <div className="container">
-                    <div className="grid-editorial">
-                        <RevealOnScroll direction="left" className="prose">
-                            <p className="text-overline" style={{ marginBottom: 'var(--space-4)' }}>Farm Stay</p>
-                            <h2>Living Simply,<br /><em className="text-accent">Living Well</em></h2>
-                            <p>For larger groups as well as individuals we also offer two door-to-door dorms with 20 bunk beds each, situated right next to our skate park and in the heart of Varanashi Organic Farms.</p>
-                            <p>Whether you choose our tree houses or the dorms, your stay includes — next to real intimacy with nature &amp; scrumptious home-cooked organic food — access to our facilities and activities, depending on your wishes.</p>
-                            <p>Individuals, couples, families, and friends keen to experience eco-friendly living are all welcome.</p>
-                        </RevealOnScroll>
-                        <RevealOnScroll direction="right">
-                            <div className="img-editorial">
-                                <Image src="https://varanashi.com/wp-content/uploads/2022/12/Cottage_1-300x300.jpg" alt="Farm stay accommodation" width={300} height={300} style={{ width: '100%', height: 'auto' }} />
+            <hr className="sp-divider" />
+
+            {/* ═══════════ FARM STAY ═══════════ */}
+            <section className="sp-section sp-section--alt">
+                <div className="sp-section__inner">
+                    <div className="sp-split sp-split--reverse">
+                        <div className="sp-split__image">
+                            <Image src="https://varanashi.com/wp-content/uploads/2019/06/dorm-860x500.jpg" alt="Dorm accommodation" fill sizes="50vw" />
+                        </div>
+                        <div className="sp-split__text">
+                            <p className="sp-overline">Farm Stay</p>
+                            <h2 className="sp-heading">Farm Stay</h2>
+                            <div className="sp-prose">
+                                <p>For larger groups as well as individuals we also offer two door-to-door dorms with 20 bunk beds each, situated right next to our skate park and in the heart of Varanashi Organic Farms.</p>
+                                <p>Whether you choose our tree houses or the dorms, your stay includes – next to real intimacy with nature & scrumptious home-cooked organic food – access to our facilities and activities, depending on your wishes.</p>
+                                <p>Individuals, couples, families, and friends keen to experience eco-friendly living are all welcome.</p>
                             </div>
-                            <p className="text-caption" style={{ marginTop: 'var(--space-3)', fontStyle: 'italic' }}>Mud Cottage — rustic elegance for couples or solo travelers. From ₹3,500.</p>
-                        </RevealOnScroll>
+                        </div>
                     </div>
                 </div>
             </section>
 
             {/* ═══════════ ROOM BOOKING ═══════════ */}
-            <section style={{ padding: 'var(--space-24) 0' }} id="book-room">
-                <div className="container">
-                    <RevealOnScroll className="text-center mb-10">
-                        <p className="text-overline">Book Your Stay</p>
-                        <h2 className="text-display" style={{ marginTop: 'var(--space-4)' }}>Choose Your<br /><em className="text-accent">Room</em></h2>
-                        <p style={{ color: 'var(--text-secondary)', marginTop: 'var(--space-4)', maxWidth: '540px', margin: 'var(--space-4) auto 0', lineHeight: 'var(--leading-relaxed)' }}>
-                            From rustic shared spaces to private tree houses — each stay immerses you in the rhythm of the farm.
-                        </p>
-                    </RevealOnScroll>
+            <section className="sp-section" id="book-room">
+                <div className="sp-section__inner">
+                    <p className="sp-overline">Book Your Stay</p>
+                    <h2 className="sp-heading sp-heading--lg">Choose Your Room</h2>
                     <RoomCards />
                 </div>
             </section>
 
-            {/* ORGANIC RETREAT */}
-            <section className="section-cream" style={{ padding: 'var(--space-24) 0' }}>
-                <div className="container-text">
-                    <RevealOnScroll className="text-center">
-                        <p className="text-overline" style={{ marginBottom: 'var(--space-4)' }}>Organic Retreat</p>
-                        <h2 className="text-display">Rejuvenate Your<br /><em className="text-accent">Mind &amp; Body</em></h2>
-                    </RevealOnScroll>
-                    <div className="divider divider-center" style={{ margin: 'var(--space-8) auto' }}></div>
-                    <RevealOnScroll className="prose" style={{ margin: '0 auto' }}>
-                        <p className="drop-cap">Enjoy a peaceful and rejuvenating mind-body retreat in an untouched natural environment. Your daily schedule will consist of organic exposure, refreshing swim sessions, walks on the extensive property, massages, yoga sessions and three delicious organic home-cooked meals.</p>
-                        <p>This retreat helps you rejuvenate and learn more about organic living. You will come away from the retreat with the ability to make healthier lifestyle choices at home. In your free time, you can enjoy nature walks, self-study, swimming and other water sports or just relax.</p>
-                    </RevealOnScroll>
-                </div>
-            </section>
+            <hr className="sp-divider" />
 
-            {/* CACAO TRAIL */}
-            <section style={{ padding: 'var(--space-24) 0' }}>
-                <div className="container">
-                    <div className="grid-editorial">
-                        <RevealOnScroll direction="left">
-                            <div className="img-editorial">
-                                <Image src="https://varanashi.com/wp-content/uploads/2019/03/image00002-scaled-300x300.jpeg" alt="Cacao Trail at Varanashi" width={300} height={300} style={{ width: '100%', height: 'auto' }} />
-                            </div>
-                        </RevealOnScroll>
-                        <RevealOnScroll direction="right" className="prose">
-                            <p className="text-overline" style={{ marginBottom: 'var(--space-4)' }}>Cacao Trail</p>
-                            <h2>From Bean<br /><em className="text-accent">to Bar</em></h2>
-                            <p>In this exciting and informative program, you learn about the chocolate making process: how the cacao plants at the farm become chocolate bars in a factory. You will gain an appreciation for all the work that goes into one of your favourite foods, and have plenty of samples along the way!</p>
-                            <p>Daily activities include: hands-on potting, plant grafting, harvesting cacao pods, seed removal and fermentation, visits to local farms and a visit to a chocolate factory.</p>
-                        </RevealOnScroll>
-                    </div>
-                </div>
-            </section>
-
-            {/* FACILITIES */}
-            <section className="section-linen" style={{ padding: 'var(--space-24) 0' }}>
-                <div className="container">
-                    <RevealOnScroll className="text-center mb-10">
-                        <p className="text-overline">Facilities &amp; Activities</p>
-                        <h2 className="text-display" style={{ marginTop: 'var(--space-4)' }}>Everything You<br /><em className="text-accent">Need Is Here</em></h2>
-                    </RevealOnScroll>
-                    <div className="facilities-grid stagger">
-                        <RevealOnScroll>
-                            <div className="facility-group">
-                                <h4>Farm</h4>
-                                <ul>
-                                    <li>Organic farming</li>
-                                    <li>Cacao trail</li>
-                                    <li>Water harvesting techniques</li>
-                                    <li>5-senses farm walk</li>
-                                    <li>Manure production</li>
-                                    <li>Plant grafting</li>
-                                </ul>
-                            </div>
-                        </RevealOnScroll>
-                        <RevealOnScroll>
-                            <div className="facility-group">
-                                <h4>Water</h4>
-                                <ul>
-                                    <li>Swimming (lessons on request)</li>
-                                    <li>High-board diving</li>
-                                    <li>Water slackline</li>
-                                    <li>Stand-up paddling</li>
-                                    <li>&apos;Flying fox&apos; zip lining</li>
-                                    <li>Rope swing</li>
-                                    <li>Kayaking (in season)</li>
-                                    <li>Surfing (on request)</li>
-                                </ul>
-                            </div>
-                        </RevealOnScroll>
-                        <RevealOnScroll>
-                            <div className="facility-group">
-                                <h4>Land</h4>
-                                <ul>
-                                    <li>Yoga</li>
-                                    <li>Trekking</li>
-                                    <li>Skateboarding</li>
-                                    <li>Basketball</li>
-                                    <li>Slacklining</li>
-                                    <li>MTB bike rides</li>
-                                    <li>Geo Caching (treasure hunt)</li>
-                                    <li>Camp fires &amp; camping</li>
-                                </ul>
-                            </div>
-                        </RevealOnScroll>
-                    </div>
-                </div>
-            </section>
-
-            {/* CTA */}
-            <section className="section-dark section-sm">
-                <div className="container text-center">
-                    <RevealOnScroll>
-                        <p className="text-overline" style={{ color: 'var(--color-gold-warm)', marginBottom: 'var(--space-4)' }}>Ready to Experience?</p>
-                        <h3 className="text-h2" style={{ color: 'var(--color-cream)', marginBottom: 'var(--space-6)' }}>We host stays all year round and are happy to design<br />one that suits your needs.</h3>
-                        <div style={{ display: 'flex', gap: 'var(--space-4)', justifyContent: 'center', flexWrap: 'wrap' }}>
-                            <Link href="/contact" className="btn btn-accent btn-lg">Get in Touch</Link>
-                            <a href="tel:+919482213019" className="btn btn-ghost btn-lg">Call +91 9482 213019</a>
+            {/* ═══════════ ORGANIC RETREAT ═══════════ */}
+            <section className="sp-section sp-section--alt">
+                <div className="sp-section__inner">
+                    <div className="sp-split">
+                        <div className="sp-split__image">
+                            <Image src="https://varanashi.com/wp-content/uploads/2019/06/IMG_0419-860x500.jpg" alt="Organic retreat" fill sizes="50vw" />
                         </div>
-                    </RevealOnScroll>
+                        <div className="sp-split__text">
+                            <p className="sp-overline">Organic Retreat</p>
+                            <h2 className="sp-heading">Organic Retreat</h2>
+                            <div className="sp-prose">
+                                <p>Enjoy a peaceful and rejuvenating mind-body retreat in an untouched natural environment.</p>
+                                <p>Your daily schedule will consist of organic exposure, refreshing swim sessions, walks on the extensive property, massages, yoga sessions and three delicious organic home-cooked meals. This retreat helps you rejuvenate and learn more about organic living. You will come away from the retreat with the ability to make healthier lifestyle choices at home. In your free time, you can enjoy nature walks, self-study, swimming and other water sports or just relax.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* ═══════════ CACAO TRAIL ═══════════ */}
+            <section className="sp-section">
+                <div className="sp-section__inner">
+                    <div className="sp-split sp-split--reverse">
+                        <div className="sp-split__image">
+                            <Image src="https://varanashi.com/wp-content/uploads/2019/06/Grafting-3-860x500.jpg" alt="Cacao trail" fill sizes="50vw" />
+                        </div>
+                        <div className="sp-split__text">
+                            <p className="sp-overline">Cacao Trail</p>
+                            <h2 className="sp-heading">Cacao Trail</h2>
+                            <div className="sp-prose">
+                                <p>In this exciting and informative program, you learn about the chocolate making process: how the cacao plants at the farm become chocolate bars in a factory. You will gain an appreciation for all the work that goes into one of your favourite foods, and have plenty of samples along the way!</p>
+                                <p>Daily activities include: hands-on potting, plant grafting, harvesting cacao pods, seed removal and fermentation, visits to local farms and a visit to a chocolate factory. In your free time you can enjoy farm facilities including water activities such as swimming, zip line, kayaking and stand-up paddling.</p>
+                            </div>
+                            <div className="sp-packages">
+                                <div className="sp-package">
+                                    <p className="sp-package__name">Single Day Cacao Trail</p>
+                                </div>
+                                <div className="sp-package">
+                                    <p className="sp-package__name">3 Day Cacao Trail</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <hr className="sp-divider" />
+
+            {/* ═══════════ CUSTOM STAYS ═══════════ */}
+            <section className="sp-section sp-section--alt">
+                <div className="sp-section__inner sp-section__inner--text">
+                    <div className="sp-highlight">
+                        <p>An early morning dive, followed by a farm walk that activates all five senses, and an evening spent in the fun pond? Or are you looking to see organic farming practices in action, and at the same time improve your swim skills under professional guidance?</p>
+                    </div>
+                    <div className="sp-prose">
+                        <p>You want it all? Our varied facilities and experts in their respective fields are happy to accommodate your interests. We have experience organizing tailor-made stays of various durations for groups and individuals of all ages, backgrounds, and motivations.</p>
+                    </div>
+                </div>
+            </section>
+
+            {/* ═══════════ FACILITIES / ACTIVITIES ═══════════ */}
+            <section className="sp-section">
+                <div className="sp-section__inner">
+                    <p className="sp-overline">What&apos;s Here</p>
+                    <h2 className="sp-heading sp-heading--lg">Facilities / Activities</h2>
+                    <div className="sp-facilities">
+                        <div className="sp-facilities__group">
+                            <h4>The Property</h4>
+                            <ul>
+                                <li>60 acres of thick, healthy forest</li>
+                                <li>40 acres of organic crop plantation</li>
+                                <li>Nursery & dairy</li>
+                                <li>2 year-round full swimming ponds with A+ water quality</li>
+                                <li>2 treehouses</li>
+                                <li>2 dorms</li>
+                                <li>Stage (for yoga, dance, theatre)</li>
+                                <li>Diving platforms; monkey bars; trampoline</li>
+                                <li>Skate park</li>
+                            </ul>
+                        </div>
+                        <div className="sp-facilities__group">
+                            <h4>Farm</h4>
+                            <ul>
+                                <li>Organic farming</li>
+                                <li>Cacao trail</li>
+                                <li>Water harvesting techniques</li>
+                                <li>5-senses farm walk</li>
+                                <li>Manure production</li>
+                                <li>Plant grafting</li>
+                            </ul>
+                        </div>
+                        <div className="sp-facilities__group">
+                            <h4>Water</h4>
+                            <ul>
+                                <li>Swimming (lessons on request)</li>
+                                <li>High-board diving</li>
+                                <li>Water slackline</li>
+                                <li>Stand-up-paddling</li>
+                                <li>&apos;Flying fox&apos; zip lining</li>
+                                <li>Rope swing</li>
+                                <li>Kayaking (in season)</li>
+                                <li>Surfing (on request)</li>
+                            </ul>
+                        </div>
+                        <div className="sp-facilities__group">
+                            <h4>Land</h4>
+                            <ul>
+                                <li>Yoga</li>
+                                <li>Trekking</li>
+                                <li>Skateboarding</li>
+                                <li>Basketball</li>
+                                <li>Slacklining</li>
+                                <li>MTB bike rides</li>
+                                <li>Geo Caching (treasure hunt)</li>
+                                <li>Camp fires</li>
+                                <li>Camping</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* ═══════════ GALLERY ═══════════ */}
+            <section className="sp-section sp-section--alt">
+                <div className="sp-section__inner">
+                    <p className="sp-overline">Gallery</p>
+                    <div className="sp-gallery">
+                        <div className="sp-gallery__item"><Image src="https://varanashi.com/wp-content/uploads/2019/06/Accomodation2-860x500.jpg" alt="Accommodation" fill sizes="33vw" /></div>
+                        <div className="sp-gallery__item"><Image src="https://varanashi.com/wp-content/uploads/2019/06/IMG_20160912_123206-860x500.jpeg" alt="Farm activity" fill sizes="33vw" /></div>
+                        <div className="sp-gallery__item"><Image src="https://varanashi.com/wp-content/uploads/2019/06/IMG_0197-860x500.jpg" alt="Farm landscape" fill sizes="33vw" /></div>
+                        <div className="sp-gallery__item"><Image src="https://varanashi.com/wp-content/uploads/2019/06/IMG_9436-860x500.jpg" alt="Activities" fill sizes="33vw" /></div>
+                        <div className="sp-gallery__item"><Image src="https://varanashi.com/wp-content/uploads/2019/06/IMG_20150816_111555-860x500.jpg" alt="Farm view" fill sizes="33vw" /></div>
+                        <div className="sp-gallery__item"><Image src="https://varanashi.com/wp-content/uploads/2019/06/IMG_0605-860x500.jpg" alt="Outdoor activities" fill sizes="33vw" /></div>
+                        <div className="sp-gallery__item"><Image src="https://varanashi.com/wp-content/uploads/2019/06/IMG_0633-860x500.jpg" alt="Nature" fill sizes="33vw" /></div>
+                        <div className="sp-gallery__item"><Image src="https://varanashi.com/wp-content/uploads/2019/06/treeshouse-pond-1-860x500.jpg" alt="Tree house pond" fill sizes="33vw" /></div>
+                        <div className="sp-gallery__item"><Image src="https://varanashi.com/wp-content/uploads/2019/06/LRM_EXPORT_20171203_005745-860x500.jpg" alt="Retreat moment" fill sizes="33vw" /></div>
+                        <div className="sp-gallery__item"><Image src="https://varanashi.com/wp-content/uploads/2019/06/IMG-20190301-WA0013-860x500.jpg" alt="Farm life" fill sizes="33vw" /></div>
+                    </div>
+                </div>
+            </section>
+
+            {/* ═══════════ CTA ═══════════ */}
+            <section className="sp-cta">
+                <div className="sp-cta__inner">
+                    <p className="sp-cta__tagline">Interested in our existing offers or a personalized program? We host stays all year round and are happy to design one that suits your needs and exceeds your expectations 🙂</p>
+                    <div className="sp-cta__actions">
+                        <Link href="/contact" className="btn btn-primary">Get in Touch</Link>
+                    </div>
+                    <p className="sp-cta__contact">
+                        <a href="tel:+919482213019">+91 94822 13019</a> &nbsp;·&nbsp; <a href="tel:+919449968377">+91 94499 68377</a>
+                    </p>
                 </div>
             </section>
 

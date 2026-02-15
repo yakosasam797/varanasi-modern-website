@@ -150,20 +150,22 @@ export default function HomePage() {
 
       {/* ═══════════ ACT 4 · PRODUCTS (BENTO) ═══════════ */}
       <section className="act-products" id="act-4">
-        <div className="act-products__header">
-          <p className="text-overline" style={{ marginBottom: 'var(--space-5)' }}>
-            From This Soil
-          </p>
-          <h2>
-            What Grows Here<br />
-            <em className="text-accent">Has Stories to Tell</em>
-          </h2>
-        </div>
-        <BentoProducts />
-        <div style={{ textAlign: 'center', marginTop: 'var(--space-12)' }}>
-          <Link href="/shop" className="btn btn-ghost">
-            Explore All Products
-          </Link>
+        <div className="act-products__inner">
+          <div className="act-products__header">
+            <p className="text-overline" style={{ marginBottom: 'var(--space-5)' }}>
+              From This Soil
+            </p>
+            <h2>
+              What Grows Here<br />
+              <em className="text-accent">Has Stories to Tell</em>
+            </h2>
+          </div>
+          <BentoProducts />
+          <div style={{ textAlign: 'center', marginTop: 'var(--space-12)' }}>
+            <Link href="/shop" className="btn btn-ghost">
+              Explore All Products
+            </Link>
+          </div>
         </div>
       </section>
 

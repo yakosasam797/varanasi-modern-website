@@ -3,13 +3,13 @@
 import { useEffect, useState, useRef } from 'react';
 import Link from 'next/link';
 
+/* ── One consistent set of links for ALL pages ── */
 const NAV_LINKS = [
-    { href: '/', label: 'Home', showOnHome: false },
+    { href: '/', label: 'Home' },
     {
         href: '/about',
-        label: 'About',
+        label: 'About Us',
         dropdown: true,
-        showOnHome: false,
         children: [
             { href: '/about', label: 'The Varanashi Story' },
             { href: '/vof', label: 'Varanashi Organic Farms' },
@@ -20,23 +20,21 @@ const NAV_LINKS = [
             { href: '/stoked', label: 'Stoked India Adventures' },
         ],
     },
-    { href: '/shop', label: 'Shop' },
-    { href: '/retreats', label: 'Stay & Experience' },
+    { href: '/outreach', label: 'Outreach' },
+    { href: '/shop', label: 'Products' },
+    { href: '/retreats', label: 'Retreats' },
     { href: '/fitness', label: 'Fitness' },
     { href: '/volunteer', label: 'Volunteer' },
-    { href: '/outreach', label: 'Learn' },
-    { href: '/news', label: 'News' },
-    { href: '/contact', label: 'Contact' },
 ];
 
 const MOBILE_LINKS = [
     { href: '/', label: 'Home' },
-    { href: '/about', label: 'About Varanashi' },
-    { href: '/shop', label: 'Shop' },
-    { href: '/retreats', label: 'Stay & Experience' },
+    { href: '/about', label: 'About Us' },
+    { href: '/outreach', label: 'Outreach' },
+    { href: '/shop', label: 'Products' },
+    { href: '/retreats', label: 'Retreats' },
     { href: '/fitness', label: 'Fitness' },
     { href: '/volunteer', label: 'Volunteer' },
-    { href: '/outreach', label: 'Learn' },
     { href: '/news', label: 'News' },
     { href: '/contact', label: 'Contact' },
 ];
@@ -105,24 +103,6 @@ export default function Nav({ isHomepage = false }) {
         document.body.style.overflow = '';
     };
 
-    // Filter links based on page type
-    const desktopLinks = isHomepage
-        ? NAV_LINKS.filter((l) => l.showOnHome !== false || l.dropdown || !('showOnHome' in l))
-        : NAV_LINKS;
-
-    // For homepage, show simplified nav
-    const homepageLinks = [
-        { href: '/about', label: 'Story' },
-        { href: '/shop', label: 'Shop' },
-        { href: '/retreats', label: 'Stay' },
-        { href: '/fitness', label: 'Movement' },
-        { href: '/volunteer', label: 'Volunteer' },
-        { href: '/news', label: 'News' },
-        { href: '/contact', label: 'Contact' },
-    ];
-
-    const linksToShow = isHomepage ? homepageLinks : desktopLinks;
-
     return (
         <>
             <nav className="nav" id="main-nav" ref={navRef}>
@@ -131,7 +111,7 @@ export default function Nav({ isHomepage = false }) {
                         Varanashi
                     </Link>
                     <div className="nav-links">
-                        {linksToShow.map((link) =>
+                        {NAV_LINKS.map((link) =>
                             link.dropdown ? (
                                 <div className="nav-dropdown" key={link.href}>
                                     <Link href={link.href} className="nav-link">

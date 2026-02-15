@@ -1,27 +1,14 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
 import RevealOnScroll from '@/components/RevealOnScroll';
+import { PRODUCTS } from '@/lib/products';
 
 export const metadata = {
     title: 'Shop Organic',
     description: 'Shop certified organic products from Varanashi Farms — cacao, spices, honey, rice, and more. Grown with six generations of wisdom.',
 };
-
-const PRODUCTS = [
-    { name: 'CACAO Beans', price: '₹350', category: 'Varanashi Produce', img: 'https://varanashi.com/wp-content/uploads/2019/03/image00002-scaled-300x300.jpeg' },
-    { name: 'Cacao Dates 250gms', price: '₹250', category: 'Varanashi Produce', img: 'https://varanashi.com/wp-content/uploads/2019/03/image00008-300x300.jpeg' },
-    { name: 'Cacao Nibs', price: '₹400', category: 'Varanashi Produce', img: 'https://varanashi.com/wp-content/uploads/2019/03/IMG_20231125_092921-1-300x300.jpg' },
-    { name: 'Natural Honey', price: '₹500', category: 'Varanashi Produce', img: 'https://varanashi.com/wp-content/uploads/2019/03/blossom-compressed-300x300.jpg' },
-    { name: 'Organic Turmeric Powder', price: '₹150', category: 'Varanashi Produce', img: 'https://varanashi.com/wp-content/uploads/2019/03/image00005-300x300.jpg' },
-    { name: 'Black Pepper', price: '₹300', category: 'Varanashi Produce', img: 'https://varanashi.com/wp-content/uploads/2019/03/IMG_8568-compressed-300x300.jpg' },
-    { name: 'Nutmeg', price: '₹400', category: 'Varanashi Produce', img: 'https://varanashi.com/wp-content/uploads/2019/03/image00005-300x300.jpg' },
-    { name: 'Mace', price: '₹600', category: 'Varanashi Produce', img: 'https://varanashi.com/wp-content/uploads/2019/03/image00005-300x300.jpg' },
-    { name: 'Organic Boiled Rice', price: '₹120', category: 'Varanashi Produce', img: 'https://varanashi.com/wp-content/uploads/2020/09/WhatsApp-Image-2020-09-17-at-4.36.42-PM-300x300.jpeg' },
-    { name: 'Organic Jackfruit Seeds', price: '₹200', category: 'Varanashi Produce', img: 'https://varanashi.com/wp-content/uploads/2021/01/WhatsApp-Image-2021-01-16-at-1.59.01-PM-300x300.jpeg' },
-    { name: 'Varanashi Blossom', price: '₹350', category: 'Varanashi Produce', img: 'https://varanashi.com/wp-content/uploads/2019/03/blossom-compressed-300x300.jpg' },
-    { name: 'Krishi Mithra Trolley', price: 'Enquire', category: 'Agricultural Inputs', img: 'https://varanashi.com/wp-content/uploads/2019/03/trolley-300x300.jpg' },
-];
 
 export default function ShopPage() {
     return (
@@ -52,9 +39,9 @@ export default function ShopPage() {
             <section style={{ padding: 'var(--space-24) 0' }}>
                 <div className="container">
                     <div className="product-grid stagger">
-                        {PRODUCTS.map((product, i) => (
-                            <RevealOnScroll key={i}>
-                                <div className="product-card">
+                        {PRODUCTS.map((product) => (
+                            <RevealOnScroll key={product.slug}>
+                                <Link href={`/shop/${product.slug}`} className="product-card product-card--link">
                                     <div className="product-card-img">
                                         <Image src={product.img} alt={product.name} width={300} height={300} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                                     </div>
@@ -63,7 +50,7 @@ export default function ShopPage() {
                                         <p className="product-card-name">{product.name}</p>
                                         <p className="product-card-price">{product.price}</p>
                                     </div>
-                                </div>
+                                </Link>
                             </RevealOnScroll>
                         ))}
                     </div>

@@ -2,86 +2,126 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
-import RevealOnScroll from '@/components/RevealOnScroll';
 
 export const metadata = {
-    title: 'Outreach & Learn',
-    description: 'Varanashi Outreach — over 50 completed projects since 1992. Community impact, organic village transformation, and sustainable agriculture education.',
+    title: 'Outreach - Varanashi',
+    description: 'Varanashi outreach — community development, organic village initiatives, technology demonstration, and VDRF services in Dakshina Kannada.',
 };
 
 export default function OutreachPage() {
     return (
         <>
             <Nav />
-            <section className="page-header">
-                <div className="page-header-bg">
-                    <Image src="https://varanashi.com/wp-content/uploads/2019/06/IMG_0810-860x500.jpg" alt="Community outreach at Varanashi" fill style={{ objectFit: 'cover', filter: 'brightness(0.65) saturate(0.8)' }} sizes="100vw" priority />
+
+            {/* ═══════════ HERO ═══════════ */}
+            <section className="sp-hero">
+                <div className="sp-hero__bg">
+                    <Image src="https://varanashi.com/wp-content/uploads/2019/06/IMG_0605-860x500.jpg" alt="Outreach at Varanashi" fill sizes="100vw" priority />
                 </div>
-                <div className="page-header-overlay"></div>
-                <div className="page-header-content">
-                    <RevealOnScroll><p className="text-overline">Learn &amp; Outreach</p></RevealOnScroll>
-                    <RevealOnScroll><h1>Beyond the Farm Gate</h1></RevealOnScroll>
-                    <RevealOnScroll><p>Three decades of community impact — transforming villages, publishing research, and educating the next generation.</p></RevealOnScroll>
+                <div className="sp-hero__content">
+                    <h1 className="sp-hero__title">Outreach</h1>
+                    <p className="sp-hero__subtitle">Community development, organic village initiatives, and sustainable technology.</p>
                 </div>
             </section>
 
-            <section style={{ padding: 'var(--space-24) 0' }}>
-                <div className="container-text">
-                    <RevealOnScroll className="text-center">
-                        <p className="text-overline" style={{ marginBottom: 'var(--space-4)' }}>Community Impact</p>
-                        <h2 className="text-display">A Village<br /><em className="text-accent">Transformed</em></h2>
-                    </RevealOnScroll>
-                    <div className="divider divider-center" style={{ margin: 'var(--space-8) auto' }}></div>
-                    <RevealOnScroll className="prose" style={{ margin: '0 auto' }}>
-                        <p className="drop-cap">One of Varanashi&apos;s proudest achievements has been the transformation of the village of Moodambail into a 100% organic village. The surrounding farming community of 350+ families has been progressively guided towards sustainable organic farming practices over three decades.</p>
-                        <p>Through outreach programs, advisory services, and field demonstrations, Varanashi has helped neighboring farms transition from chemical agriculture to organic methods — improving soil health, biodiversity, and farmer incomes simultaneously.</p>
-                    </RevealOnScroll>
-                </div>
-            </section>
-
-            <section className="section-dark section-sm">
-                <div className="container">
-                    <RevealOnScroll>
-                        <div className="stats-bar">
-                            <div className="stat-item"><h3>50+</h3><p>Completed Projects</p></div>
-                            <div className="stat-item"><h3>350+</h3><p>Farming Families</p></div>
-                            <div className="stat-item"><h3>30+</h3><p>Years of Outreach</p></div>
-                            <div className="stat-item"><h3>100%</h3><p>Organic Village</p></div>
-                        </div>
-                    </RevealOnScroll>
-                </div>
-            </section>
-
-            <section className="section-cream" style={{ padding: 'var(--space-24) 0' }}>
-                <div className="container">
-                    <RevealOnScroll className="text-center mb-10">
-                        <p className="text-overline">Outreach Programs</p>
-                        <h2 className="text-display" style={{ marginTop: 'var(--space-4)' }}>Knowledge<br /><em className="text-accent">Shared Freely</em></h2>
-                    </RevealOnScroll>
-                    <div className="grid grid-3 stagger">
-                        {[
-                            { overline: 'Education', title: 'Student & School Visits', desc: 'Educational tours for schools and colleges — hands-on exposure to organic farming, composting, water harvesting, and biodiversity conservation.' },
-                            { overline: 'Advisory', title: 'Farmer Advisory Services', desc: 'One-on-one guidance for farmers transitioning to organic methods. Soil testing, crop planning, pest management, and market linkages.' },
-                            { overline: 'Research', title: 'International Publications', desc: 'Papers presented at IFOAM Congresses, national conferences, and research journals. Contributing to the global body of organic agriculture knowledge.' },
-                        ].map((p) => (
-                            <RevealOnScroll key={p.title}>
-                                <div className="org-card">
-                                    <p className="text-overline">{p.overline}</p>
-                                    <h3>{p.title}</h3>
-                                    <p>{p.desc}</p>
-                                </div>
-                            </RevealOnScroll>
-                        ))}
+            {/* ═══════════ PROJECT WORK ═══════════ */}
+            <section className="sp-section">
+                <div className="sp-section__inner sp-section__inner--narrow">
+                    <p className="sp-overline">Community</p>
+                    <h2 className="sp-heading">Project Work</h2>
+                    <div className="sp-prose">
+                        <p>Varanashi Development and Research Foundation (VDRF) has been carrying out regular community outreach programs with the aim of supporting sustainable agriculture and environmental conservation. These include training programs for farmers, school outreach initiatives, and community development projects in the villages surrounding the farm.</p>
                     </div>
                 </div>
             </section>
 
-            <section style={{ padding: 'var(--space-12) 0' }}>
-                <div className="container text-center">
-                    <RevealOnScroll>
-                        <h3 className="text-h2" style={{ marginBottom: 'var(--space-5)' }}>Want to bring your students or learn more?</h3>
-                        <Link href="/contact" className="btn btn-primary btn-lg">Contact Us</Link>
-                    </RevealOnScroll>
+            <hr className="sp-divider" />
+
+            {/* ═══════════ OUTREACH ACTIVITIES ═══════════ */}
+            <section className="sp-section sp-section--alt">
+                <div className="sp-section__inner sp-section__inner--narrow">
+                    <p className="sp-overline">Activities</p>
+                    <h2 className="sp-heading">Outreach Activities</h2>
+                    <div className="sp-prose">
+                        <p>Our outreach activities include farmer training programs, school visits and environmental education, organic farming workshops, distribution of organic planting materials and bio-fertilizers, and support for local cooperatives. These programs have reached hundreds of farmers and thousands of students in the Dakshina Kannada and Udupi districts.</p>
+                    </div>
+                </div>
+            </section>
+
+            {/* ═══════════ MOODAMBAIL ORGANIC VILLAGE ═══════════ */}
+            <section className="sp-section">
+                <div className="sp-section__inner sp-section__inner--narrow">
+                    <p className="sp-overline">100% Organic Village</p>
+                    <h2 className="sp-heading">Moodambail Organic Village</h2>
+                    <div className="sp-prose">
+                        <p>The Moodambail 100% organic village project is a pioneering initiative of VDRF. Our aim is to convert the entire village of Moodambail into a certified organic village — a first in this region. The project involves training and supporting all farmers in the village to adopt organic farming practices, while also creating market linkages for their produce.</p>
+                        <p>The project serves as a model for organic village conversion and has attracted attention from agricultural agencies, NGOs, and government departments as a replicable example of community-driven organic transition.</p>
+                    </div>
+
+                    <div className="sp-highlight">
+                        <p>A pioneering initiative to create the region&apos;s first 100% certified organic village — a model for community-driven sustainable agriculture.</p>
+                    </div>
+                </div>
+            </section>
+
+            <hr className="sp-divider" />
+
+            {/* ═══════════ TECHNOLOGY DEMONSTRATION ═══════════ */}
+            <section className="sp-section sp-section--alt">
+                <div className="sp-section__inner sp-section__inner--narrow">
+                    <p className="sp-overline">Technology</p>
+                    <h2 className="sp-heading">Technology Demonstration</h2>
+                    <div className="sp-prose">
+                        <p>The VAST (Varanashi Agro-Sustainable Technology) Centre serves as a technology demonstration site where farmers can learn about sustainable farming techniques, including composting methods, bio-fertilizer production, water harvesting, and integrated farming systems. Regular training sessions and workshops are conducted for visiting farmers and agricultural students.</p>
+                    </div>
+                </div>
+            </section>
+
+            {/* ═══════════ VDRF SERVICES ═══════════ */}
+            <section className="sp-section">
+                <div className="sp-section__inner">
+                    <p className="sp-overline">Services</p>
+                    <h2 className="sp-heading">VDRF Services</h2>
+                    <div className="sp-facilities">
+                        <div className="sp-facilities__group">
+                            <h4>Training &amp; Education</h4>
+                            <ul>
+                                <li>Organic farming workshops</li>
+                                <li>Composting and bio-fertilizer training</li>
+                                <li>School outreach programs</li>
+                                <li>Agricultural student internships</li>
+                            </ul>
+                        </div>
+                        <div className="sp-facilities__group">
+                            <h4>Community Development</h4>
+                            <ul>
+                                <li>Farmer support programs</li>
+                                <li>Organic certification assistance</li>
+                                <li>Market linkage for organic produce</li>
+                                <li>Cooperative development</li>
+                            </ul>
+                        </div>
+                        <div className="sp-facilities__group">
+                            <h4>Research</h4>
+                            <ul>
+                                <li>Organic farming research</li>
+                                <li>Soil health analysis</li>
+                                <li>Integrated farming systems</li>
+                                <li>Water management techniques</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* ═══════════ CTA ═══════════ */}
+            <section className="sp-cta">
+                <div className="sp-cta__inner">
+                    <p className="sp-cta__tagline">Interested in supporting our outreach work or visiting the farm?</p>
+                    <div className="sp-cta__actions">
+                        <Link href="/contact" className="btn btn-primary">Get in Touch</Link>
+                        <Link href="/vdrf" className="btn btn-ghost">Learn about VDRF</Link>
+                    </div>
                 </div>
             </section>
 
