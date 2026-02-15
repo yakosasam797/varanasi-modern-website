@@ -16,7 +16,7 @@ export default function VolunteerPage() {
             {/* ═══════════ HERO ═══════════ */}
             <section className="sp-hero">
                 <div className="sp-hero__bg">
-                    <Image src="https://varanashi.com/wp-content/uploads/2019/06/WhatsApp-Image-2019-06-25-at-08.55.05-860x500.jpeg" alt="Volunteering at Varanashi" fill sizes="100vw" priority />
+                    <Image src="https://varanashi.com/wp-content/uploads/2019/03/img_8242-compressed-1.jpg" alt="Volunteering at Varanashi" fill sizes="100vw" priority />
                 </div>
                 <div className="sp-hero__content">
                     <h1 className="sp-hero__title">Volunteering</h1>
@@ -26,12 +26,19 @@ export default function VolunteerPage() {
 
             {/* ═══════════ ABOUT VOLUNTEERING ═══════════ */}
             <section className="sp-section">
-                <div className="sp-section__inner sp-section__inner--narrow">
-                    <p className="sp-overline">At Varanashi</p>
-                    <h2 className="sp-heading">Volunteering</h2>
-                    <div className="sp-prose">
-                        <p>Our volunteers contribute to the operations and activities of the farm and our various organizations. They help with organic farming, aquatic education, the research foundation, the technology centre, and community outreach. In return you get involved and play a key role. The wide spectrum of operations and daily life at Varanashi will provide a rich and multicultural experience – both on a professional and on a human level.</p>
-                        <p>At various points in time, between 2 and 10 volunteers of varied nationalities help out at Varanashi. Our volunteers typically stay between 2 weeks and 6 months, with most opting for a period of about 4-8 weeks.</p>
+                <div className="sp-section__inner">
+                    <div className="sp-split">
+                        <div className="sp-split__image">
+                            <Image src="https://varanashi.com/wp-content/uploads/2019/06/volunteers.jpg" alt="Volunteers at Varanashi" fill sizes="50vw" />
+                        </div>
+                        <div className="sp-split__text">
+                            <p className="sp-overline">At Varanashi</p>
+                            <h2 className="sp-heading">Volunteering</h2>
+                            <div className="sp-prose">
+                                <p>Do you want to understand how to grow the food you eat? Are you itching to get out of the city and reconnect with nature? Does the geek inside you get excited about effective microorganisms and fermentation? Do you want to experience a thriving self-sustaining eco-friendly organic farm in action and help it flourish even more?</p>
+                                <p>At Varanashi Farms, we try to imbibe ideas of regeneration, sustainability, self-reliance and environmental stability into the things we do. Volunteers who are selected to work on our organic farm will learn an excellent combination of traditional permaculture and modern farming practices, understand the importance of eco-friendly and organic farming methods, and rainwater harvesting and live as a part of a rural village community.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -40,11 +47,19 @@ export default function VolunteerPage() {
 
             {/* ═══════════ PITCH YOUR PASSION ═══════════ */}
             <section className="sp-section sp-section--alt">
-                <div className="sp-section__inner sp-section__inner--narrow">
-                    <p className="sp-overline">Get Involved</p>
-                    <h2 className="sp-heading">Pitch your Passion</h2>
-                    <div className="sp-prose">
-                        <p>Our volunteers usually come to us with a particular set of skills, interests, or a passion they bring to the table. In the past, apart from people with agriculture backgrounds, we have worked with architects, digital marketers, animal experts, musicians, yoga teachers, athletes, designers and many more. Whatever your field of interest, we are open to creative ideas that add value to our cause and look forward to working with you.</p>
+                <div className="sp-section__inner">
+                    <div className="sp-split sp-split--reverse">
+                        <div className="sp-split__image">
+                            <Image src="https://varanashi.com/wp-content/uploads/2019/03/IMG_20181219_112614-1-compressed.jpg" alt="Farm work at Varanashi" fill sizes="50vw" />
+                        </div>
+                        <div className="sp-split__text">
+                            <p className="sp-overline">Get Involved</p>
+                            <h2 className="sp-heading">Pitch your Passion</h2>
+                            <div className="sp-prose">
+                                <p>Our volunteers usually come to us with a particular set of skills, interests, or a passion they bring to the table. In the past, apart from people with agriculture backgrounds, we have worked with architects, digital marketers, animal experts, musicians, yoga teachers, athletes, designers and many more. Whatever your field of interest, we are open to creative ideas that add value to our cause and look forward to working with you.</p>
+                                <p>Volunteers get to explore different aspects of the farming calendar through the year — harvesting, planting, manuring, weeding — you name it. We have the occasional fun project such as maintenance of our irrigation tanks or treehouses, and we take note of your interests and skills when assigning tasks!</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -56,17 +71,19 @@ export default function VolunteerPage() {
                     <h2 className="sp-heading">A Typical Day</h2>
                     <table className="sp-schedule">
                         <tbody>
-                            <tr><td>7:00 AM</td><td>Rise &amp; shine</td></tr>
-                            <tr><td>7:30 AM</td><td>Breakfast</td></tr>
-                            <tr><td>8:00 AM</td><td>Morning session (farm work, teaching, etc.)</td></tr>
-                            <tr><td>12:30 PM</td><td>Lunch</td></tr>
-                            <tr><td>1:30 PM</td><td>Rest / free time</td></tr>
-                            <tr><td>3:00 PM</td><td>Afternoon session</td></tr>
-                            <tr><td>5:30 PM</td><td>Sports &amp; swimming</td></tr>
-                            <tr><td>7:30 PM</td><td>Dinner</td></tr>
+                            <tr><td>8:00 AM</td><td>Breakfast</td></tr>
+                            <tr><td>9:00 AM</td><td>Morning session (farm work, teaching, etc.)</td></tr>
+                            <tr><td>10:30 AM</td><td>Break for tea &amp; snack</td></tr>
+                            <tr><td>1:00 PM</td><td>Lunch break</td></tr>
+                            <tr><td>2:00 PM</td><td>Afternoon session</td></tr>
+                            <tr><td>4:00 PM</td><td>Free time — explore the farm, swim, hang out</td></tr>
+                            <tr><td>7:00 PM</td><td>Dinner</td></tr>
                             <tr><td>Evening</td><td>Free time, socializing, camp fire</td></tr>
                         </tbody>
                     </table>
+                    <div className="sp-highlight">
+                        <p>The work is usually six hours a day, five days a week. Time before 9 AM and after 4 PM is yours to explore the farm, have fun, or catch up on personal work.</p>
+                    </div>
                 </div>
             </section>
 
@@ -74,12 +91,19 @@ export default function VolunteerPage() {
 
             {/* ═══════════ WHAT'S INCLUDED ═══════════ */}
             <section className="sp-section sp-section--alt">
-                <div className="sp-section__inner sp-section__inner--narrow">
-                    <p className="sp-overline">What&apos;s Included</p>
-                    <h2 className="sp-heading">Stay Details</h2>
-                    <div className="sp-prose">
-                        <p>As a volunteer at Varanashi, you receive three organic, home-cooked meals daily, comfortable accommodation in our dorm facilities, and access to all farm activities and facilities during your free time — including swimming, yoga, skateboarding, biking, trekking, and more.</p>
-                        <p>The working day typically runs about 5–6 hours, with two sessions (morning and afternoon), and weekends are free for you to explore the beautiful Dakshina Kannada and Coorg region.</p>
+                <div className="sp-section__inner">
+                    <div className="sp-split">
+                        <div className="sp-split__image">
+                            <Image src="https://varanashi.com/wp-content/uploads/2019/06/dorm.jpg" alt="Volunteer accommodation at Varanashi" fill sizes="50vw" />
+                        </div>
+                        <div className="sp-split__text">
+                            <p className="sp-overline">What&apos;s Included</p>
+                            <h2 className="sp-heading">Stay Details</h2>
+                            <div className="sp-prose">
+                                <p>We have four volunteer homes that you will share with the other volunteers. True to our idea of community living, you will stay in shared accommodation with common living spaces. Three fresh and home-cooked meals are served every day. All food is strictly vegetarian and seasonal, based on what is grown at the farm.</p>
+                                <p>As long as you are respectful of the culture, guidelines, wildlife, and premises, we have an easy relationship with the volunteers. You have the added opportunity of exploring your physical literacy, improving your swimming, and learning important lifesaving skills, courtesy Coach Partha.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -90,9 +114,12 @@ export default function VolunteerPage() {
                     <p className="sp-overline">Practical Information</p>
                     <h2 className="sp-heading">Costs &amp; Policies</h2>
                     <div className="sp-prose">
-                        <p>There is a voluntary contribution expected from our volunteers. This is to partly cover the costs of food and accommodation. The weekly contribution is between INR 2000 and INR 5000, depending on the type of accommodation and duration of stay. Accommodation ranges from dorm beds to private rooms, subject to availability.</p>
-                        <p><strong>Minimum stay:</strong> 2 weeks.</p>
-                        <p><strong>How to apply:</strong> Send us an email with a brief introduction, your dates of availability, your interests or skills, and what you hope to contribute. We will get back to you within a few days.</p>
+                        <p>We host volunteers year-round. Most short- or medium-term volunteers come to us through Instagram, word-of-mouth or <a href="https://www.workaway.info/518875272681-en.html" target="_blank" rel="noopener noreferrer">Workaway</a>. Currently we offer fifteen-day or 21-day volunteer programs.</p>
+                        <p>The fifteen-day program is payable at Rs. 9,000 per head. The only charge for the one-month program is a placeholder fee of Rs. 5,000 per head to secure your place. All volunteers are subject to a probationary period of one week.</p>
+                        <p>If you wish to experience our farm for less than fifteen days, we can accommodate you in our treehouses as guests (subject to availability).</p>
+                    </div>
+                    <div className="sp-highlight">
+                        <p>Our mission is to plant the seed of organic farming, sustainability and community living to those keen to learn — and have fun in the process.</p>
                     </div>
                 </div>
             </section>
@@ -111,6 +138,7 @@ export default function VolunteerPage() {
                         <div className="sp-gallery__item"><Image src="https://varanashi.com/wp-content/uploads/2019/06/WhatsApp-Image-2019-06-25-at-08.55.06-860x500.jpeg" alt="Farming" fill sizes="33vw" /></div>
                         <div className="sp-gallery__item"><Image src="https://varanashi.com/wp-content/uploads/2019/06/WhatsApp-Image-2019-06-25-at-08.55.09-860x500.jpeg" alt="Group activities" fill sizes="33vw" /></div>
                         <div className="sp-gallery__item"><Image src="https://varanashi.com/wp-content/uploads/2019/06/WhatsApp-Image-2019-06-25-at-08.55.03-784x500.jpeg" alt="Nature" fill sizes="33vw" /></div>
+                        <div className="sp-gallery__item"><Image src="https://varanashi.com/wp-content/uploads/2019/06/WhatsApp-Image-2019-06-25-at-08.55.05-860x500.jpeg" alt="Volunteering at Varanashi" fill sizes="33vw" /></div>
                     </div>
                 </div>
             </section>
@@ -123,7 +151,7 @@ export default function VolunteerPage() {
                         <Link href="/contact" className="btn btn-primary">Apply Now</Link>
                     </div>
                     <p className="sp-cta__contact">
-                        Email us with a brief introduction &amp; your dates · <a href="tel:+919482213019">+91 94822 13019</a>
+                        Email your CV &amp; cover letter · <a href="tel:+919482213019">+91 94822 13019</a>
                     </p>
                 </div>
             </section>

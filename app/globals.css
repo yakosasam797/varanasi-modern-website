@@ -628,6 +628,7 @@ ol {
 }
 
 
+
 /* ═══════════════════════════════════════
    ACT 1 · THE OPENING FRAME (HERO)
    ═══════════════════════════════════════ */
@@ -797,14 +798,6 @@ ol {
     width: 100%;
 }
 
-.act-timeline__year {
-    font-family: var(--font-serif);
-    font-size: var(--text-timeline);
-    font-weight: var(--weight-light);
-    color: var(--color-sand);
-    line-height: var(--leading-none);
-}
-
 .act-timeline__era-title {
     font-family: var(--font-serif);
     font-size: var(--text-3xl);
@@ -857,11 +850,11 @@ ol {
     .act-timeline__era-img {
         max-height: 35vh;
     }
-
-    .act-timeline__year {
-        font-size: clamp(4rem, 15vw, 7rem);
-    }
 }
+
+
+
+
 
 
 /* ═══════════════════════════════════════
@@ -3503,5 +3496,654 @@ h2 {
 
     .sp-facilities {
         grid-template-columns: 1fr;
+    }
+}
+
+
+/* ═══════════════════════════════════════════════════════════
+   COMPREHENSIVE RESPONSIVE DESIGN
+   Mobile-first breakpoints: 960px → 768px → 480px
+   ═══════════════════════════════════════════════════════════ */
+
+/* ─────────────────────────────────────────
+   TABLET  (max-width: 960px)
+   ───────────────────────────────────────── */
+@media (max-width: 960px) {
+
+    /* Typography scale-down */
+    :root {
+        --text-display: clamp(2rem, 4.5vw, 3.5rem);
+        --text-hero: clamp(3rem, 9vw, 7rem);
+        --text-6xl: 4rem;
+        --text-5xl: 3rem;
+        --text-4xl: 2.5rem;
+        --text-3xl: 2rem;
+    }
+
+    /* Sections — less vertical padding */
+    .act-products {
+        padding: var(--space-16) 0;
+    }
+
+    .act-stay {
+        padding: var(--space-16) 0;
+    }
+
+    .act-close {
+        padding: var(--space-12) var(--space-6);
+    }
+
+    /* Grid helpers – stack on tablet */
+    .grid-2 {
+        grid-template-columns: 1fr;
+    }
+
+    .grid-4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Product detail — stack */
+    .product-detail {
+        grid-template-columns: 1fr;
+        gap: var(--space-8);
+    }
+
+    .product-detail__image {
+        position: static;
+    }
+
+    /* Footer grid — 2 columns */
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: var(--space-8);
+    }
+
+    /* About Us / editorial content — stack */
+    .grid-editorial {
+        grid-template-columns: 1fr;
+        gap: var(--space-8);
+    }
+
+    /* Stats bar — 2 columns */
+    .stats-bar {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* ─────────────────────────────────────────
+   MOBILE  (max-width: 768px)
+   ───────────────────────────────────────── */
+@media (max-width: 768px) {
+
+    /* Typography further refined */
+    :root {
+        --text-display: clamp(1.75rem, 5vw, 2.5rem);
+        --text-hero: clamp(2.5rem, 12vw, 5rem);
+        --text-6xl: 3rem;
+        --text-5xl: 2.5rem;
+        --text-4xl: 2rem;
+        --text-3xl: 1.75rem;
+        --text-2xl: 1.5rem;
+    }
+
+    /* Base typography */
+    h1 {
+        font-size: var(--text-3xl);
+        margin-bottom: var(--space-4);
+    }
+
+    h2 {
+        font-size: var(--text-2xl);
+        margin-bottom: var(--space-4);
+    }
+
+    h3 {
+        font-size: var(--text-xl);
+        margin-bottom: var(--space-3);
+    }
+
+    h4 {
+        font-size: var(--text-lg);
+        margin-bottom: var(--space-2);
+    }
+
+    /* Container tighter padding */
+    .container,
+    .container-text,
+    .container-narrow {
+        padding: 0 var(--space-4);
+    }
+
+    /* Section spacing reduction */
+    .act-products {
+        padding: var(--space-12) 0;
+    }
+
+    .act-stay {
+        padding: var(--space-12) 0;
+    }
+
+    .act-stay__header {
+        margin-bottom: var(--space-10);
+    }
+
+    .act-close {
+        min-height: 60vh;
+        padding: var(--space-10) var(--space-4);
+    }
+
+    .act-close__tagline {
+        font-size: var(--text-2xl);
+    }
+
+    /* Philosophy section */
+    .act-philosophy {
+        min-height: auto;
+        padding: var(--space-12) var(--space-4);
+    }
+
+    /* Journey panels */
+    .act-journey__panel {
+        height: 80vh;
+    }
+
+    .act-journey__panel-year {
+        font-size: var(--text-4xl);
+    }
+
+    .act-journey__panel-content {
+        padding: 0 var(--space-4);
+    }
+
+    /* Hero content */
+    .act-hero__content {
+        padding: 0 var(--space-4) var(--space-12);
+    }
+
+    .act-hero__sub {
+        font-size: var(--text-base);
+        max-width: 100%;
+    }
+
+    .act-hero__tagline {
+        font-size: var(--text-xs);
+        margin-top: var(--space-5);
+    }
+
+    /* Nav mobile overlay — improved */
+    .nav-mobile {
+        gap: var(--space-4);
+        padding: var(--space-10) var(--space-6);
+    }
+
+    .nav-mobile a {
+        font-size: var(--text-2xl);
+    }
+
+    /* Stagger animation for mobile links */
+    .nav-mobile.open a:nth-child(1) {
+        transition-delay: 50ms;
+    }
+
+    .nav-mobile.open a:nth-child(2) {
+        transition-delay: 100ms;
+    }
+
+    .nav-mobile.open a:nth-child(3) {
+        transition-delay: 150ms;
+    }
+
+    .nav-mobile.open a:nth-child(4) {
+        transition-delay: 200ms;
+    }
+
+    .nav-mobile.open a:nth-child(5) {
+        transition-delay: 250ms;
+    }
+
+    .nav-mobile.open a:nth-child(6) {
+        transition-delay: 300ms;
+    }
+
+    .nav-mobile.open a:nth-child(7) {
+        transition-delay: 350ms;
+    }
+
+    .nav-mobile.open a:nth-child(8) {
+        transition-delay: 400ms;
+    }
+
+    .nav-mobile.open a:nth-child(9) {
+        transition-delay: 450ms;
+    }
+
+    /* Page header (subpages) */
+    .page-header {
+        height: 40vh;
+        min-height: 280px;
+    }
+
+    .page-header-content {
+        padding: var(--space-6) var(--space-4) var(--space-8);
+    }
+
+    .page-header-content h1 {
+        font-size: var(--text-2xl);
+    }
+
+    .page-header-content p {
+        font-size: var(--text-base);
+    }
+
+    /* Footer grid */
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-6);
+    }
+
+    .footer-brand p {
+        max-width: 100%;
+    }
+
+    /* Org cards */
+    .grid-3 {
+        grid-template-columns: 1fr;
+    }
+
+    .org-card {
+        padding: var(--space-6);
+    }
+
+    /* Program cards */
+    .program-card {
+        padding: var(--space-5);
+    }
+
+    .program-card h3 {
+        font-size: var(--text-xl);
+    }
+
+    /* Drop cap — smaller on mobile */
+    .drop-cap::first-letter {
+        font-size: 3.5em;
+    }
+
+    /* Buttons — touch-friendly */
+    .btn {
+        padding: var(--space-3) var(--space-6);
+        font-size: var(--text-xs);
+        min-height: 44px;
+    }
+
+    .btn-lg {
+        padding: var(--space-4) var(--space-8);
+    }
+
+    .act-close__ctas {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .act-close__ctas .btn {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .act-close__contact {
+        flex-direction: column;
+        gap: var(--space-3);
+        align-items: center;
+    }
+
+    /* Product actions — stack */
+    .product-detail__actions {
+        flex-direction: column;
+    }
+
+    .product-detail__actions .btn {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+
+    /* Breadcrumb */
+    .product-breadcrumb-wrapper {
+        padding-top: 80px;
+    }
+
+    /* News */
+    .news-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .news-card__title {
+        font-size: var(--text-xl);
+    }
+
+    /* Room cards */
+    .room-cards {
+        grid-template-columns: 1fr;
+    }
+
+    /* Booking form */
+    .booking-form__row {
+        grid-template-columns: 1fr;
+    }
+
+    /* Form rows */
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    /* Contact form — full width fields */
+    .contact-form {
+        gap: var(--space-4);
+    }
+
+    /* Facilities grid */
+    .facilities-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Stats bar */
+    .stats-bar {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-4);
+        padding: var(--space-6) var(--space-4);
+    }
+
+    .stats-bar__number {
+        font-size: var(--text-3xl);
+    }
+
+    /* Bento layout */
+    .bento-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .bento-detail {
+        position: static;
+        transform: none !important;
+    }
+
+    /* sp-* subpage system */
+    .sp-hero {
+        height: 45vh;
+        min-height: 280px;
+    }
+
+    .sp-hero__title {
+        font-size: var(--text-2xl);
+    }
+
+    .sp-hero__subtitle {
+        font-size: var(--text-base);
+    }
+
+    .sp-section {
+        padding: var(--space-10) var(--space-4);
+    }
+
+    .sp-split {
+        grid-template-columns: 1fr;
+        gap: var(--space-6);
+    }
+
+    .sp-split--reverse .sp-split__image,
+    .sp-split--reverse .sp-split__text {
+        order: 0;
+    }
+
+    .sp-heading {
+        font-size: var(--text-2xl);
+    }
+
+    .sp-heading--lg {
+        font-size: var(--text-3xl);
+    }
+
+    .sp-cta {
+        padding: var(--space-10) var(--space-4);
+    }
+
+    .sp-cta__tagline {
+        font-size: var(--text-2xl);
+    }
+
+    .sp-cta__actions {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sp-cta__actions .btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .sp-highlight {
+        padding: var(--space-5) var(--space-6);
+    }
+
+    .sp-highlight p {
+        font-size: var(--text-lg);
+    }
+
+    .sp-gallery {
+        grid-template-columns: 1fr 1fr;
+        gap: var(--space-3);
+    }
+
+    .sp-facilities {
+        grid-template-columns: 1fr;
+    }
+
+    /* Reveal animations — less dramatic offset on mobile */
+    .reveal {
+        transform: translateY(20px);
+    }
+
+    .reveal-left {
+        transform: translateX(-20px);
+    }
+
+    .reveal-right {
+        transform: translateX(20px);
+    }
+
+    /* Text accent heading — scale */
+    .text-accent-heading {
+        font-size: var(--text-2xl);
+    }
+
+    /* Prose */
+    .prose h2 {
+        font-size: var(--text-2xl);
+    }
+
+    .prose p:first-of-type {
+        font-size: var(--text-base);
+    }
+}
+
+
+/* ─────────────────────────────────────────
+   SMALL MOBILE  (max-width: 480px)
+   ───────────────────────────────────────── */
+@media (max-width: 480px) {
+    :root {
+        --text-display: clamp(1.5rem, 6vw, 2rem);
+        --text-hero: clamp(2.2rem, 14vw, 4rem);
+    }
+
+    /* Hero safe viewport height */
+    .act-hero {
+        height: 100svh;
+    }
+
+    .act-hero__title {
+        font-size: clamp(2.2rem, 12vw, 4rem);
+    }
+
+    .act-hero__content {
+        padding-bottom: var(--space-16);
+    }
+
+    /* Journey panels — shorter */
+    .act-journey__panel {
+        height: 70vh;
+    }
+
+    .act-journey__panel-year {
+        font-size: var(--text-3xl);
+    }
+
+    /* Timeline eras — single column, smaller */
+    .act-timeline__era {
+        padding: var(--space-4);
+    }
+
+    .act-timeline__era-inner {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: var(--space-6);
+    }
+
+    .act-timeline__era-img {
+        max-height: 30vh;
+    }
+
+    /* Stay cards — shorter */
+    .stay-card {
+        min-height: 250px;
+    }
+
+    .stay-card__name {
+        font-size: var(--text-2xl);
+    }
+
+    .stay-card__content {
+        padding: var(--space-5);
+    }
+
+    /* Bento grid — 2 columns still */
+    .bento-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 4px;
+    }
+
+    .bento-tile--wide {
+        grid-column: span 1;
+        aspect-ratio: 1;
+    }
+
+    .bento-detail {
+        padding: var(--space-5) var(--space-4);
+    }
+
+    .bento-detail__name {
+        font-size: var(--text-2xl);
+    }
+
+    /* Gallery — single column */
+    .sp-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    /* Packages — single column */
+    .sp-packages {
+        grid-template-columns: 1fr;
+    }
+
+    /* Close section CTAs */
+    .act-close__ctas {
+        gap: var(--space-3);
+    }
+
+    /* Stats — 2 column reduced gap */
+    .stats-bar {
+        gap: var(--space-3);
+    }
+
+    .stats-bar__number {
+        font-size: var(--text-2xl);
+    }
+
+    /* Product grid */
+    .product-grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    /* Footer — tighter */
+    .footer-grid {
+        gap: var(--space-5);
+    }
+
+    /* Nav mobile links — smaller for more items */
+    .nav-mobile a {
+        font-size: var(--text-xl);
+    }
+
+    .nav-mobile {
+        gap: var(--space-3);
+    }
+
+    /* Page header — compact */
+    .page-header {
+        height: 35vh;
+        min-height: 240px;
+    }
+
+    .page-header-content h1 {
+        font-size: var(--text-xl);
+    }
+
+    /* sp hero — compact */
+    .sp-hero {
+        height: 40vh;
+        min-height: 240px;
+    }
+
+    .sp-hero__title {
+        font-size: var(--text-xl);
+    }
+
+    .sp-hero__content {
+        padding: var(--space-6) var(--space-4) var(--space-8);
+    }
+
+    /* Booking form */
+    .booking-form__actions {
+        flex-direction: column;
+    }
+
+    /* Room card — compact */
+    .room-card__content {
+        padding: var(--space-4);
+    }
+
+    .room-card__name {
+        font-size: var(--text-xl);
+    }
+
+    /* Schedule table — scroll */
+    .sp-schedule {
+        display: block;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    /* Prose */
+    .prose {
+        max-width: 100%;
+    }
+
+    /* Divider */
+    .divider {
+        width: 40px;
     }
 }

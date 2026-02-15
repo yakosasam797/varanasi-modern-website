@@ -38,52 +38,25 @@ export default function HomePage() {
       <section className="act-timeline" id="act-2">
         <div className="act-timeline__track">
           <TimelineEra
-            overline="The Beginning"
-            year="1816"
-            title="A King's Gift"
-            text="King Lingaraju of Kodagu gifts a vast stretch of land and a grand house at Moodambailu to a wiseman named Jyothishi. A family legacy is planted — one that will outlive empires."
-            img="https://varanashi.com/wp-content/uploads/2019/06/IMG_20151023_082241-860x500.jpeg"
-            alt="Historic Varanashi estate"
+            overline="Welcome To"
+            heading="Varanashi Organic Farms"
+            text="We aim at simulating the diversity and eco-friendliness of the natural forests in farming and farm practices. During the last few decades, Varanashi Organizations have contributed greatly towards the promotion of organic and sustainable agriculture."
+            img="https://varanashi.com/wp-content/uploads/2019/03/LRM_EXPORT_20171203_011748-1-compressed-scaled.jpg"
+            alt="Varanashi organic farm aerial view"
           />
           <TimelineEra
-            overline="The Visionary"
-            year="1950"
-            title="Subraya Bhat's Dream"
-            text="Sahakari Rathna Varanashi Subraya Bhat transforms the ancestral land. His conviction that farmers deserve dignity becomes a movement across South India."
-            img="https://varanashi.com/wp-content/uploads/2019/06/img_4853-860x500.jpg"
-            alt="Varanashi farms heritage"
+            overline="A Place For"
+            heading="Movement"
+            text="Here at Varanashi we take a truly holistic view of personal well-being. Nutrition, exercise, lifestyle, and conscious choices all go into leading a happier and healthier life. Our Organic Retreats reflect this holistic approach."
+            img="https://varanashi.com/wp-content/uploads/2019/06/LRM_EXPORT_20171203_012007-scaled.jpg"
+            alt="Varanashi swimming pond aerial view"
           />
           <TimelineEra
-            overline="The Institution"
-            year="1972"
-            title="CAMPCO Is Born"
-            text="Shri Bhat founds CAMPCO Ltd. — today one of India's cooperative giants. A farmer's son builds an institution that will serve millions of growers for generations to come."
-            img="https://varanashi.com/wp-content/uploads/2019/06/IMG_0810-860x500.jpg"
-            alt="CAMPCO cooperative heritage"
-          />
-          <TimelineEra
-            overline="The Turning Point"
-            year="1991"
-            title="Return to the Roots"
-            text="After a decade of chemical farming brought disease and diminishing returns, the family makes a radical choice. Complete organic conversion. The soil begins to heal. So does everything it touches."
-            img="https://varanashi.com/wp-content/uploads/2019/06/DSC_8373-860x500.jpg"
-            alt="Organic transition"
-          />
-          <TimelineEra
-            overline="The Next Generation"
-            year="2019"
-            title="World Champions"
-            text="Partha Varanashi, youngest heir, coaches Team India at the Aquatic World Championships. He brings movement sports and aquatic education to the centuries-old farm — bridging heritage with youth."
-            img="https://varanashi.com/wp-content/uploads/2019/06/treeshouse-pond-1-860x500.jpg"
-            alt="Varanashi swimming pond"
-          />
-          <TimelineEra
-            overline="The Living Legacy"
-            year="2026"
-            title="Two Centuries. One Soil."
-            text="Today, Varanashi is a 100-acre ecosystem — organic farm, research foundation, retreat, swimming academy, adventure ground, and home. Six generations later, the land still speaks."
-            img="https://varanashi.com/wp-content/uploads/2019/06/IMG_0605-860x500.jpg"
-            alt="Varanashi today aerial"
+            overline="Building Champions And"
+            heading="Promoting Sustainable Communities"
+            text="The improvements in agricultural practices are brought about by recycling of agro-wastes, the use of bio-control agents, water harvesting, silviculture, as well as outreach programs and advisory services. The research technologies developed in the foundation are being field-tested at a macro-level at Varanashi Farms."
+            img="https://varanashi.com/wp-content/uploads/2019/03/DJI_0026-compressed-scaled.jpg"
+            alt="Varanashi farm buildings aerial view"
           />
         </div>
         <div className="act-timeline__progress">
@@ -91,13 +64,14 @@ export default function HomePage() {
         </div>
       </section>
 
+
       {/* ═══════════ ACT 3 · THE LAND (PINNED IMAGE + SCROLLING TEXT) ═══════════ */}
       <section className="act-land" id="act-3">
         <div className="act-land__wrapper">
           <div className="act-land__image gpu">
             <Image
-              src="https://varanashi.com/wp-content/uploads/2019/06/DSC_8373-860x500.jpg"
-              alt="Varanashi organic farm"
+              src="/images/farmer-field.jpg"
+              alt="Varanashi farm worker in the field"
               fill
               style={{ objectFit: 'cover' }}
               sizes="55vw"
@@ -288,14 +262,15 @@ export default function HomePage() {
 
 /* ─── Sub-components ─── */
 
-function TimelineEra({ overline, year, title, text, img, alt }) {
+
+
+function TimelineEra({ overline, heading, text, img, alt }) {
   return (
     <div className="act-timeline__era">
       <div className="act-timeline__era-inner">
         <div>
           <p className="text-overline">{overline}</p>
-          <div className="act-timeline__year">{year}</div>
-          <h3 className="act-timeline__era-title">{title}</h3>
+          <h3 className="act-timeline__era-title">{heading}</h3>
           <p className="act-timeline__era-text">{text}</p>
         </div>
         <div className="act-timeline__era-img">

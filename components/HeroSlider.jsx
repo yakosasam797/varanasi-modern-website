@@ -5,34 +5,30 @@ import Image from 'next/image';
 
 const HERO_IMAGES = [
     {
-        src: 'https://varanashi.com/wp-content/uploads/2019/06/DSC_8373-860x500.jpg',
+        src: 'https://varanashi.com/wp-content/uploads/2019/03/LRM_EXPORT_20171203_011748-1-compressed-scaled.jpg',
         alt: 'Varanashi organic farm aerial view',
     },
     {
-        src: 'https://varanashi.com/wp-content/uploads/2019/06/IMG_20151023_082241-860x500.jpeg',
-        alt: 'Varanashi estate heritage view',
+        src: 'https://varanashi.com/wp-content/uploads/2019/06/LRM_EXPORT_20171203_012007-scaled.jpg',
+        alt: 'Varanashi swimming pond aerial view',
     },
     {
-        src: 'https://varanashi.com/wp-content/uploads/2019/06/treeshouse-pond-1-860x500.jpg',
-        alt: 'Varanashi swimming pond and treehouses',
-    },
-    {
-        src: 'https://varanashi.com/wp-content/uploads/2019/06/IMG_0605-860x500.jpg',
-        alt: 'Varanashi farm panoramic view',
+        src: 'https://varanashi.com/wp-content/uploads/2019/03/DJI_0026-compressed-scaled.jpg',
+        alt: 'Varanashi farm buildings aerial view',
     },
 ];
 
 export default function HeroSlider() {
     const [currentIndex, setCurrentIndex] = useState(0);
 
-    const advance = useCallback(() => {
+    const goNext = useCallback(() => {
         setCurrentIndex((prev) => (prev + 1) % HERO_IMAGES.length);
     }, []);
 
     useEffect(() => {
-        const interval = setInterval(advance, 5000);
+        const interval = setInterval(goNext, 5000);
         return () => clearInterval(interval);
-    }, [advance]);
+    }, [goNext]);
 
     return (
         <div className="hero-slider">
@@ -57,5 +53,3 @@ export default function HeroSlider() {
         </div>
     );
 }
-
-export { HERO_IMAGES };

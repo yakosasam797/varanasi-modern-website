@@ -25,6 +25,7 @@ const NAV_LINKS = [
     { href: '/retreats', label: 'Retreats' },
     { href: '/fitness', label: 'Fitness' },
     { href: '/volunteer', label: 'Volunteer' },
+    { href: '/contact', label: 'Contact' },
 ];
 
 const MOBILE_LINKS = [

@@ -91,7 +91,7 @@ function initHero() {
     const bg = hero.querySelector('.act-hero__bg');
     const content = hero.querySelector('.act-hero__content');
 
-    // Animate pre-rendered character spans (no more innerHTML mutation)
+    // Animate pre-rendered character spans
     const chars = hero.querySelectorAll('.act-hero__title .char');
     if (chars.length) {
         gsap.to(chars, {
@@ -186,12 +186,11 @@ function initTimeline() {
 
     // Per-era text reveal using containerAnimation for proper horizontal triggering
     eras.forEach((era) => {
-        const year = era.querySelector('.act-timeline__year');
         const title = era.querySelector('.act-timeline__era-title');
         const text = era.querySelector('.act-timeline__era-text');
         const overline = era.querySelector('.text-overline');
 
-        const targets = [overline, year, title, text].filter(Boolean);
+        const targets = [overline, title, text].filter(Boolean);
         // Ensure elements are visible by default
         gsap.set(targets, { opacity: 1, y: 0 });
 
@@ -211,7 +210,6 @@ function initTimeline() {
         });
     });
 }
-
 /* ─── ACT 3 · PINNED IMAGE + TEXT ─── */
 function initPinnedLand() {
     const section = document.querySelector('.act-land');
