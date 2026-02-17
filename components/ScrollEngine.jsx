@@ -161,6 +161,39 @@ function initTimeline() {
     if (!section || !track) return;
 
     const eras = track.querySelectorAll('.act-timeline__era');
+    const isMobile = window.innerWidth < 769;
+
+    // ── Mobile: vertical layout with simple reveals ──
+    if (isMobile) {
+        eras.forEach((era) => {
+            const title = era.querySelector('.act-timeline__era-title');
+            const text = era.querySelector('.act-timeline__era-text');
+            const overline = era.querySelector('.text-overline');
+            const img = era.querySelector('.act-timeline__era-img');
+
+            const targets = [overline, title, text, img].filter(Boolean);
+            gsap.set(targets, { opacity: 1, y: 0 });
+
+            gsap.from(targets, {
+                opacity: 0,
+                y: 30,
+                stagger: 0.1,
+                duration: 0.8,
+                ease: 'power3.out',
+                scrollTrigger: {
+                    trigger: era,
+                    start: 'top 80%',
+                    toggleActions: 'play none none reverse',
+                },
+            });
+        });
+        // Hide progress bar on mobile
+        const progress = section.querySelector('.act-timeline__progress');
+        if (progress) progress.style.display = 'none';
+        return;
+    }
+
+    // ── Desktop: horizontal scroll pinning ──
     const totalWidth = eras.length * window.innerWidth;
 
     // Main horizontal scroll tween
@@ -289,27 +322,32 @@ function initJourneyPanels() {
     const panels = document.querySelectorAll('.act-journey__panel');
     if (!panels.length) return;
 
+    const isMobile = window.innerWidth < 769;
+
     panels.forEach((panel) => {
         const content = panel.querySelector('.act-journey__panel-content');
 
-        ScrollTrigger.create({
-            trigger: panel,
-            start: 'top top',
-            end: '+=100%',
-            pin: true,
-            pinSpacing: true,
-        });
+        // On mobile: no pinning, just scroll naturally with fade-in
+        if (!isMobile) {
+            ScrollTrigger.create({
+                trigger: panel,
+                start: 'top top',
+                end: '+=100%',
+                pin: true,
+                pinSpacing: true,
+            });
+        }
 
         if (content) {
             gsap.from(content.children, {
                 opacity: 0,
-                y: 50,
-                stagger: 0.2,
-                duration: 1,
+                y: isMobile ? 25 : 50,
+                stagger: 0.15,
+                duration: 0.8,
                 ease: 'power3.out',
                 scrollTrigger: {
                     trigger: panel,
-                    start: 'top 40%',
+                    start: isMobile ? 'top 75%' : 'top 40%',
                     toggleActions: 'play none none reverse',
                 },
             });

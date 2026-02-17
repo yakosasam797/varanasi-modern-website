@@ -23,6 +23,12 @@ export default function BentoProducts() {
         const grid = gridRef.current;
         if (!detail || !tile || !grid) return;
 
+        // Skip repositioning on mobile — detail panel is below grid
+        if (window.innerWidth < 961) {
+            detail.style.transform = 'none';
+            return;
+        }
+
         const gridRect = grid.getBoundingClientRect();
         const tileRect = tile.getBoundingClientRect();
         const detailH = detail.offsetHeight;
@@ -56,6 +62,16 @@ export default function BentoProducts() {
         requestAnimationFrame(() => repositionDetail(0));
     }, [repositionDetail]);
 
+    // Detect mobile for tap vs hover
+    const isMobileRef = useRef(false);
+    useEffect(() => {
+        const mql = window.matchMedia('(max-width: 960px)');
+        isMobileRef.current = mql.matches;
+        const handler = (e) => { isMobileRef.current = e.matches; };
+        mql.addEventListener('change', handler);
+        return () => mql.removeEventListener('change', handler);
+    }, []);
+
     return (
         <div className="bento-layout">
             {/* ── Left: Image Grid ── */}
@@ -65,7 +81,8 @@ export default function BentoProducts() {
                         key={product.slug}
                         ref={(el) => { tileRefs.current[i] = el; }}
                         className={`bento-tile${product.span ? ` bento-tile--${product.span}` : ''}${i === active ? ' bento-tile--active' : ''}`}
-                        onMouseEnter={() => handleHover(i)}
+                        onMouseEnter={() => { if (!isMobileRef.current) handleHover(i); }}
+                        onClick={() => { if (isMobileRef.current) handleHover(i); }}
                     >
                         <Image
                             src={product.img}
