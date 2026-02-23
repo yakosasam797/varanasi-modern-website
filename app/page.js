@@ -41,21 +41,21 @@ export default function HomePage() {
             overline="Welcome To"
             heading="Varanashi Organic Farms"
             text="We aim at simulating the diversity and eco-friendliness of the natural forests in farming and farm practices. During the last few decades, Varanashi Organizations have contributed greatly towards the promotion of organic and sustainable agriculture."
-            img="https://varanashi.com/wp-content/uploads/2019/03/LRM_EXPORT_20171203_011748-1-compressed-scaled.jpg"
+            img="/images/site/hero-1.jpg"
             alt="Varanashi organic farm aerial view"
           />
           <TimelineEra
             overline="A Place For"
             heading="Movement"
             text="Here at Varanashi we take a truly holistic view of personal well-being. Nutrition, exercise, lifestyle, and conscious choices all go into leading a happier and healthier life. Our Organic Retreats reflect this holistic approach."
-            img="https://varanashi.com/wp-content/uploads/2019/06/LRM_EXPORT_20171203_012007-scaled.jpg"
+            img="/images/movement-yoga.jpg"
             alt="Varanashi swimming pond aerial view"
           />
           <TimelineEra
             overline="Building Champions And"
             heading="Promoting Sustainable Communities"
             text="The improvements in agricultural practices are brought about by recycling of agro-wastes, the use of bio-control agents, water harvesting, silviculture, as well as outreach programs and advisory services. The research technologies developed in the foundation are being field-tested at a macro-level at Varanashi Farms."
-            img="https://varanashi.com/wp-content/uploads/2019/03/DJI_0026-compressed-scaled.jpg"
+            img="/images/Sustainablelifestyle.jpeg"
             alt="Varanashi farm buildings aerial view"
           />
         </div>
@@ -131,7 +131,7 @@ export default function HomePage() {
             </p>
             <h2>
               What Grows Here<br />
-              <em className="text-accent">Has Stories to Tell</em>
+              <span className="text-accent">Has Stories to Tell</span>
             </h2>
           </div>
           <BentoProducts />
@@ -149,21 +149,21 @@ export default function HomePage() {
           year="1981"
           quote={<>&ldquo;The soil was speaking.<br />We weren&apos;t listening.&rdquo;</>}
           desc="The farm was converted to high-level chemical management. What came was more disease, more pests, and no increase in profitability."
-          img="https://varanashi.com/wp-content/uploads/2019/06/IMG_0810-860x500.jpg"
+          img="/images/site/manure.jpg"
           alt="Chemical farming era"
         />
         <JourneyPanel
           year="1991"
           quote={<>&ldquo;We chose a different path.<br />Six generations of instinct confirmed.&rdquo;</>}
           desc="Complete migration to organic methods. Slowly, steadily, the land responded. Yields increased. The ecosystem began to heal."
-          img="https://varanashi.com/wp-content/uploads/2019/06/img_4853-860x500.jpg"
+          img="/images/site/farm-landscape.jpg"
           alt="The turning point"
         />
         <JourneyPanel
           year="Now"
           quote={<>&ldquo;Nature itself<br />becomes the remedy.&rdquo;</>}
           desc="Bio-control agents replace pesticides. Agro-waste becomes compost. Water is harvested, not extracted. Research technologies are field-tested before wide-scale adoption."
-          img="https://varanashi.com/wp-content/uploads/2019/06/DSC_8373-860x500.jpg"
+          img="/images/site/nature-remedy.jpg"
           alt="Today — nature is the remedy"
         />
       </section>
@@ -176,7 +176,7 @@ export default function HomePage() {
           </p>
           <h2>
             Sleep Where the<br />
-            <em className="text-accent">Stories Began</em>
+            <span className="text-accent">Stories Began</span>
           </h2>
         </div>
         <div className="act-stay__columns">
@@ -185,14 +185,14 @@ export default function HomePage() {
               overline="The Trees"
               name="Tree Houses"
               desc="No tree was pierced. Hardwood from the farm — teak, rosewood, acacia, jackfruit. A testament to building with nature."
-              img="https://varanashi.com/wp-content/uploads/2019/06/DSC5250-860x500.jpg"
+              img="/images/site/treehouse.jpg"
               alt="Devadaru Tree House"
             />
             <StayCard
               overline="The Earth"
               name="Mud Cottages"
               desc="Handcrafted from the same clay that grows the crops. Cool in summer, warm in monsoon."
-              img="https://varanashi.com/wp-content/uploads/2022/12/Cottage_1-300x300.jpg"
+              img="/images/site/cottage.jpg"
               alt="Mud Cottage"
             />
           </div>
@@ -201,14 +201,14 @@ export default function HomePage() {
               overline="The Retreat"
               name="Organic Retreat"
               desc="Swim, walk, practice yoga, eat organic. Rejuvenate in an untouched environment."
-              img="https://varanashi.com/wp-content/uploads/2019/06/treeshouse-pond-1-860x500.jpg"
+              img="/images/site/pond.jpg"
               alt="Swimming pond retreat"
             />
             <StayCard
               overline="The Trail"
               name="Cacao Trail"
               desc="Pod to bar, farm to factory. Plant, graft, harvest, ferment. Taste chocolate at every stage."
-              img="https://varanashi.com/wp-content/uploads/2019/03/image00002-scaled-300x300.jpeg"
+              img="/images/products/cacao-beans.jpeg"
               alt="Cacao Trail"
             />
           </div>

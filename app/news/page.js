@@ -13,14 +13,14 @@ const NEWS_ARTICLES = [
     {
         title: 'The Cacao Residency in 6 Unforgettable Dishes by Chef Gokul',
         excerpt: 'At the recently-held Cacao Residency in Varanashi Farms, Vijayalakshmi Sridhar found herself most intrigued by the meals she had, courtesy Chef Gokul. The residency explored the versatility of farm-grown cacao through six unforgettable dishes that celebrated the bean-to-bar journey.',
-        img: 'https://varanashi.com/wp-content/uploads/2019/03/image00002-scaled-300x300.jpeg',
+        img: '/images/products/cacao-beans.jpeg',
         alt: 'Cacao Residency dishes by Chef Gokul',
         category: 'Farm Events',
     },
     {
         title: 'Nandan Naik Wings Gold at State Diving Championship',
         excerpt: 'Nandan Naik, a 17-year-old representing Varanashi Swimming Academy, made history by securing the first diving gold medal for the academy at the State Diving Championship. Trained by Coach Partha Varanashi in the farm\'s natural swimming ponds, Nandan\'s achievement marks a new milestone for aquatic education at Varanashi.',
-        img: 'https://varanashi.com/wp-content/uploads/2019/06/treeshouse-pond-1-860x500.jpg',
+        img: '/images/site/pond.jpg',
         alt: 'Nandan Naik diving championship',
         category: 'Achievements',
     },
@@ -32,7 +32,7 @@ export default function NewsPage() {
             <Nav />
             <section className="page-header" style={{ minHeight: '45vh' }}>
                 <div className="page-header-bg">
-                    <Image src="https://varanashi.com/wp-content/uploads/2019/06/IMG_0605-860x500.jpg" alt="Varanashi Farms" fill style={{ objectFit: 'cover', filter: 'brightness(0.6) saturate(0.8)' }} sizes="100vw" priority />
+                    <Image src="/images/site/vof-aerial.jpg" alt="Varanashi Farms" fill style={{ objectFit: 'cover', filter: 'brightness(0.6) saturate(0.8)' }} sizes="100vw" priority />
                 </div>
                 <div className="page-header-overlay"></div>
                 <div className="page-header-content">

@@ -16,7 +16,7 @@ export default function ContactPage() {
 
             <section className="page-header" style={{ minHeight: '40vh' }}>
                 <div className="page-header-bg">
-                    <Image src="https://varanashi.com/wp-content/uploads/2019/06/img_4853-860x500.jpg" alt="Varanashi Farms" fill style={{ objectFit: 'cover', filter: 'brightness(0.65) saturate(0.8)' }} sizes="100vw" priority />
+                    <Image src="/images/site/farm-landscape.jpg" alt="Varanashi Farms" fill style={{ objectFit: 'cover', filter: 'brightness(0.65) saturate(0.8)' }} sizes="100vw" priority />
                 </div>
                 <div className="page-header-overlay"></div>
                 <div className="page-header-content">
@@ -30,7 +30,7 @@ export default function ContactPage() {
                     <div className="grid-editorial">
                         <RevealOnScroll direction="left">
                             <p className="text-overline" style={{ marginBottom: 'var(--space-5)' }}>Send a Message</p>
-                            <h2 className="text-h1" style={{ marginBottom: 'var(--space-6)' }}>We&apos;d Love to<br /><em className="text-accent">Hear from You</em></h2>
+                            <h2 className="text-h1" style={{ marginBottom: 'var(--space-6)' }}>We&apos;d Love to<br /><span className="text-accent">Hear from You</span></h2>
                             <form className="contact-form" onSubmit={undefined}>
                                 <div className="form-row">
                                     <div className="form-group">

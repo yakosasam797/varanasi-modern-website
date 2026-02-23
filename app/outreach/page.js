@@ -16,7 +16,7 @@ export default function OutreachPage() {
             {/* ═══════════ HERO ═══════════ */}
             <section className="sp-hero">
                 <div className="sp-hero__bg">
-                    <Image src="https://varanashi.com/wp-content/uploads/2019/06/036.jpg" alt="Outreach at Varanashi" fill sizes="100vw" priority />
+                    <Image src="/images/site/outreach-hero.jpg" alt="Outreach at Varanashi" fill sizes="100vw" priority />
                 </div>
                 <div className="sp-hero__content">
                     <h1 className="sp-hero__title">Outreach</h1>
@@ -29,7 +29,7 @@ export default function OutreachPage() {
                 <div className="sp-section__inner">
                     <div className="sp-split">
                         <div className="sp-split__image">
-                            <Image src="https://varanashi.com/wp-content/uploads/2019/06/DSC_0106.jpg" alt="VDRF project work" fill sizes="50vw" />
+                            <Image src="/images/site/outreach-project.jpg" alt="VDRF project work" fill sizes="50vw" />
                         </div>
                         <div className="sp-split__text">
                             <p className="sp-overline">Community</p>
@@ -50,7 +50,7 @@ export default function OutreachPage() {
                 <div className="sp-section__inner">
                     <div className="sp-split sp-split--reverse">
                         <div className="sp-split__image">
-                            <Image src="https://varanashi.com/wp-content/uploads/2019/06/DSCN7703.jpg" alt="Outreach activities at Varanashi" fill sizes="50vw" />
+                            <Image src="/images/site/outreach-activities.jpg" alt="Outreach activities at Varanashi" fill sizes="50vw" />
                         </div>
                         <div className="sp-split__text">
                             <p className="sp-overline">Activities</p>
@@ -69,7 +69,7 @@ export default function OutreachPage() {
                 <div className="sp-section__inner">
                     <div className="sp-split">
                         <div className="sp-split__image">
-                            <Image src="https://varanashi.com/wp-content/uploads/2019/06/DSC_0270.jpg" alt="Moodambail organic village" fill sizes="50vw" />
+                            <Image src="/images/site/outreach-village.jpg" alt="Moodambail organic village" fill sizes="50vw" />
                         </div>
                         <div className="sp-split__text">
                             <p className="sp-overline">100% Organic Village</p>
@@ -94,7 +94,7 @@ export default function OutreachPage() {
                 <div className="sp-section__inner">
                     <div className="sp-split sp-split--reverse">
                         <div className="sp-split__image">
-                            <Image src="https://varanashi.com/wp-content/uploads/2019/06/Completed-katta-small.jpg" alt="Varanashi Sand and Plastic Barrage" fill sizes="50vw" />
+                            <Image src="/images/site/outreach-barrage.jpg" alt="Varanashi Sand and Plastic Barrage" fill sizes="50vw" />
                         </div>
                         <div className="sp-split__text">
                             <p className="sp-overline">Technology</p>

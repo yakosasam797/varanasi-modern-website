@@ -15,7 +15,7 @@ export default function VOMPage() {
             <Nav />
             <section className="page-header" style={{ minHeight: '50vh' }}>
                 <div className="page-header-bg">
-                    <Image src="https://varanashi.com/wp-content/uploads/2019/06/IMG_0810-860x500.jpg" alt="Organic manure production" fill style={{ objectFit: 'cover', filter: 'brightness(0.65) saturate(0.8)' }} sizes="100vw" priority />
+                    <Image src="/images/site/manure.jpg" alt="Organic manure production" fill style={{ objectFit: 'cover', filter: 'brightness(0.65) saturate(0.8)' }} sizes="100vw" priority />
                 </div>
                 <div className="page-header-overlay"></div>
                 <div className="page-header-content">
@@ -29,7 +29,7 @@ export default function VOMPage() {
                 <div className="container-text">
                     <RevealOnScroll className="prose">
                         <p className="text-overline" style={{ marginBottom: 'var(--space-4)' }}>About VOM</p>
-                        <h2>Nourishing the Soil,<br /><em className="text-accent">Naturally</em></h2>
+                        <h2>Nourishing the Soil,<br /><span className="text-accent">Naturally</span></h2>
                         <p className="drop-cap">Varanashi Organic Manures (VOM) produces premium certified organic farm inputs developed through decades of research at VDRF. Our manures are the result of recycling agro-wastes, using bio-control agents, and applying advanced composting techniques perfected over years of field-testing on our own farm.</p>
                         <p>Each product undergoes rigorous quality testing and is certified organic. From enriched compost to vermicompost to specialty bio-inputs, VOM provides farmers with effective, eco-friendly alternatives to chemical fertilizers — backed by real-world results from our 100+ acre organic farm.</p>
                     </RevealOnScroll>
@@ -40,7 +40,7 @@ export default function VOMPage() {
                 <div className="container">
                     <RevealOnScroll className="text-center mb-10">
                         <p className="text-overline">Products</p>
-                        <h2 className="text-display" style={{ marginTop: 'var(--space-4)' }}>Our Farm<br /><em className="text-accent">Inputs</em></h2>
+                        <h2 className="text-display" style={{ marginTop: 'var(--space-4)' }}>Our Farm<br /><span className="text-accent">Inputs</span></h2>
                     </RevealOnScroll>
                     <div className="grid grid-3 stagger">
                         {[

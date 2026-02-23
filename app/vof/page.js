@@ -15,7 +15,7 @@ export default function VOFPage() {
             <Nav />
             <section className="page-header">
                 <div className="page-header-bg">
-                    <Image src="https://varanashi.com/wp-content/uploads/2019/06/IMG_0605-860x500.jpg" alt="Varanashi Organic Farms aerial" fill style={{ objectFit: 'cover', filter: 'brightness(0.65) saturate(0.8)' }} sizes="100vw" priority />
+                    <Image src="/images/site/vof-aerial.jpg" alt="Varanashi Organic Farms aerial" fill style={{ objectFit: 'cover', filter: 'brightness(0.65) saturate(0.8)' }} sizes="100vw" priority />
                 </div>
                 <div className="page-header-overlay"></div>
                 <div className="page-header-content">
@@ -29,11 +29,11 @@ export default function VOFPage() {
                 <div className="container">
                     <div className="grid-editorial">
                         <RevealOnScroll direction="left">
-                            <div className="img-editorial"><Image src="https://varanashi.com/wp-content/uploads/2019/06/img_4853-860x500.jpg" alt="Farm landscape" width={860} height={500} style={{ width: '100%', height: 'auto' }} /></div>
+                            <div className="img-editorial"><Image src="/images/site/farm-landscape.jpg" alt="Farm landscape" width={860} height={500} style={{ width: '100%', height: 'auto' }} /></div>
                         </RevealOnScroll>
                         <RevealOnScroll direction="right" className="prose">
                             <p className="text-overline" style={{ marginBottom: 'var(--space-4)' }}>The Farm</p>
-                            <h2>A Living<br /><em className="text-accent">Ecosystem</em></h2>
+                            <h2>A Living<br /><span className="text-accent">Ecosystem</span></h2>
                             <p className="drop-cap">Varanashi Organic Farms extend for about 100 Acres over two properties, with seven irrigation ponds, a river, and a riverlet. Crop plantations are maintained within natural vegetation — 60% of the farm remains untouched forest.</p>
                             <p>Crops like Arecanut, Coconut, Cocoa, Nutmeg, Banana, Black Pepper, and Jackfruit are grown in a multi-story system. Different types of vegetables, fruits, and flowers are grown. Rice is organically cultivated during the rainy season.</p>
                             <p>The farm produced certified organic manures, practices vermicomposting, and maintains fish ponds for integrated aquaculture. Every element works in harmony with the natural ecosystem.</p>
@@ -46,7 +46,7 @@ export default function VOFPage() {
                 <div className="container">
                     <RevealOnScroll className="text-center mb-10">
                         <p className="text-overline">Farm Features</p>
-                        <h2 className="text-display" style={{ marginTop: 'var(--space-4)' }}>What We Grow &amp;<br /><em className="text-accent">How We Grow</em></h2>
+                        <h2 className="text-display" style={{ marginTop: 'var(--space-4)' }}>What We Grow &amp;<br /><span className="text-accent">How We Grow</span></h2>
                     </RevealOnScroll>
                     <div className="grid grid-3 stagger">
                         {[

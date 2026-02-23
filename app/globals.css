@@ -43,7 +43,7 @@
     --border-lighter: #f0ebe3;
 
     /* ── Typography · Documentary ── */
-    --font-serif: 'Cormorant Garamond', 'Garamond', 'Georgia', serif;
+    --font-heading: 'Outfit', 'Helvetica Neue', 'Arial', sans-serif;
     --font-sans: 'DM Sans', 'Helvetica Neue', 'Arial', sans-serif;
 
     --text-xs: 0.75rem;
@@ -199,8 +199,8 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: var(--font-serif);
-    font-weight: var(--weight-light);
+    font-family: var(--font-heading);
+    font-weight: var(--weight-medium);
     line-height: var(--leading-tight);
     color: var(--text-primary);
 }
@@ -254,7 +254,7 @@ ol {
 /* ── Accents ── */
 .text-accent {
     color: var(--brand-green);
-    font-style: italic;
+    font-style: normal;
 }
 
 .text-overline {
@@ -277,7 +277,7 @@ ol {
 
 /* ── Drop Cap ── */
 .drop-cap::first-letter {
-    font-family: var(--font-serif);
+    font-family: var(--font-heading);
     font-size: 4.5em;
     float: left;
     line-height: 0.75;
@@ -399,16 +399,30 @@ ol {
 }
 
 .nav-wordmark {
-    font-family: var(--font-serif);
+    font-family: var(--font-heading);
     font-size: var(--text-2xl);
     font-weight: var(--weight-light);
     letter-spacing: var(--tracking-wide);
     color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+}
+
+.nav-logo {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+    flex-shrink: 0;
 }
 
 /* In hero, nav text should be white */
 .nav:not(.scrolled) .nav-wordmark {
     color: #fff;
+}
+
+.nav:not(.scrolled) .nav-logo {
+    filter: brightness(0) invert(1);
 }
 
 .nav:not(.scrolled) .nav-link {
@@ -580,7 +594,7 @@ ol {
 }
 
 .nav-mobile a {
-    font-family: var(--font-serif);
+    font-family: var(--font-heading);
     font-size: var(--text-3xl);
     color: var(--text-primary);
     opacity: 0;
@@ -689,10 +703,10 @@ ol {
 }
 
 .act-hero__sub {
-    font-family: var(--font-serif);
+    font-family: var(--font-heading);
     font-size: var(--text-xl);
     font-weight: var(--weight-light);
-    font-style: italic;
+
     color: rgba(255, 255, 255, 0.85);
     max-width: 520px;
     line-height: var(--leading-relaxed);
@@ -799,10 +813,10 @@ ol {
 }
 
 .act-timeline__era-title {
-    font-family: var(--font-serif);
+    font-family: var(--font-heading);
     font-size: var(--text-3xl);
-    font-weight: var(--weight-light);
-    color: var(--text-primary);
+    font-weight: var(--weight-semi);
+    color: var(--brand-green);
     margin: var(--space-4) 0;
 }
 
@@ -901,7 +915,7 @@ ol {
 
 .act-land__block h3 {
     font-size: var(--text-3xl);
-    color: var(--text-primary);
+    color: var(--brand-green);
     margin-bottom: var(--space-5);
 }
 
@@ -913,11 +927,11 @@ ol {
 }
 
 .act-land__block .text-accent-lg {
-    font-family: var(--font-serif);
+    font-family: var(--font-heading);
     font-size: var(--text-4xl);
-    font-weight: var(--weight-light);
+    font-weight: var(--weight-medium);
     color: var(--brand-green);
-    font-style: italic;
+    font-style: normal;
     line-height: var(--leading-tight);
     margin-bottom: var(--space-5);
 }
@@ -1032,7 +1046,7 @@ ol {
 }
 
 .act-journey__panel-year {
-    font-family: var(--font-serif);
+    font-family: var(--font-heading);
     font-size: var(--text-6xl);
     font-weight: var(--weight-light);
     color: rgba(255, 255, 255, 0.25);
@@ -1041,10 +1055,10 @@ ol {
 }
 
 .act-journey__panel-quote {
-    font-family: var(--font-serif);
+    font-family: var(--font-heading);
     font-size: clamp(var(--text-2xl), 4vw, var(--text-4xl));
     font-weight: var(--weight-light);
-    font-style: italic;
+
     line-height: var(--leading-snug);
     color: #ffffff;
 }
@@ -1134,7 +1148,7 @@ ol {
 }
 
 .stay-card__name {
-    font-family: var(--font-serif);
+    font-family: var(--font-heading);
     font-size: var(--text-3xl);
     font-weight: var(--weight-light);
     color: #ffffff;
@@ -1173,7 +1187,7 @@ ol {
 
 .act-philosophy__text {
     max-width: var(--container-narrow);
-    font-family: var(--font-serif);
+    font-family: var(--font-heading);
     font-size: clamp(var(--text-2xl), 3.5vw, var(--text-4xl));
     font-weight: var(--weight-light);
     line-height: var(--leading-snug);
@@ -1208,10 +1222,10 @@ ol {
 }
 
 .act-close__tagline {
-    font-family: var(--font-serif);
+    font-family: var(--font-heading);
     font-size: var(--text-display);
     font-weight: var(--weight-light);
-    font-style: italic;
+
     color: var(--text-primary);
     margin-bottom: var(--space-8);
 }
@@ -1534,7 +1548,7 @@ ol {
 }
 
 .stat-item h3 {
-    font-family: var(--font-serif);
+    font-family: var(--font-heading);
     font-size: var(--text-4xl);
     font-weight: var(--weight-light);
     color: var(--brand-green);
@@ -1592,7 +1606,7 @@ ol {
 }
 
 .product-card-name {
-    font-family: var(--font-serif);
+    font-family: var(--font-heading);
     font-size: var(--text-lg);
     color: var(--text-primary);
     margin-bottom: var(--space-2);
@@ -1660,7 +1674,7 @@ ol {
 }
 
 .facility-group h4 {
-    font-family: var(--font-serif);
+    font-family: var(--font-heading);
     font-size: var(--text-xl);
     color: var(--text-primary);
     margin-bottom: var(--space-4);
@@ -1899,7 +1913,7 @@ ol {
 }
 
 .page-header-content h1 {
-    font-family: var(--font-serif);
+    font-family: var(--font-heading);
     font-size: var(--text-display);
     font-weight: var(--weight-light);
     color: #fff;
@@ -2006,7 +2020,7 @@ ol {
 }
 
 .org-card h3 {
-    font-family: var(--font-serif);
+    font-family: var(--font-heading);
     font-size: var(--text-2xl);
     font-weight: var(--weight-light);
     color: var(--text-primary);
@@ -2046,7 +2060,7 @@ ol {
 }
 
 .stats-bar__number {
-    font-family: var(--font-serif);
+    font-family: var(--font-heading);
     font-size: var(--text-4xl);
     font-weight: var(--weight-light);
     color: var(--brand-green);
@@ -2066,7 +2080,7 @@ ol {
    UTILITY CLASSES
    ═══════════════════════════════════════ */
 .text-h2 {
-    font-family: var(--font-serif);
+    font-family: var(--font-heading);
     font-size: var(--text-display);
     font-weight: var(--weight-light);
     line-height: var(--leading-tight);
@@ -2193,7 +2207,7 @@ ol {
 }
 
 .news-card__title {
-    font-family: var(--font-serif);
+    font-family: var(--font-heading);
     font-size: var(--text-2xl);
     font-weight: var(--weight-light);
     color: var(--text-primary);
@@ -2252,16 +2266,16 @@ ol {
 /* All h2 elements default to serif with a subtle green tint */
 h2 {
     color: var(--text-primary);
-    font-family: var(--font-serif);
+    font-family: var(--font-heading);
     font-weight: var(--weight-light);
 }
 
-/* The full green italic heading pattern (olive-green serif italic) */
+/* Green accent heading pattern */
 .text-accent-heading {
-    font-family: var(--font-serif);
+    font-family: var(--font-heading);
     font-size: var(--text-display);
-    font-weight: var(--weight-light);
-    font-style: italic;
+    font-weight: var(--weight-medium);
+    font-style: normal;
     color: var(--brand-green);
     line-height: var(--leading-tight);
 }
@@ -2287,7 +2301,7 @@ h2 {
 
 /* Make .text-display headings use serif consistently */
 .text-display {
-    font-family: var(--font-serif);
+    font-family: var(--font-heading);
     font-size: var(--text-display);
     font-weight: var(--weight-light);
     line-height: var(--leading-tight);
@@ -2352,7 +2366,7 @@ h2 {
 }
 
 .room-card__name {
-    font-family: var(--font-serif);
+    font-family: var(--font-heading);
     font-size: var(--text-2xl);
     font-weight: var(--weight-light);
     color: var(--text-primary);
@@ -2376,11 +2390,11 @@ h2 {
 }
 
 .room-card__price {
-    font-family: var(--font-serif);
+    font-family: var(--font-heading);
     font-size: var(--text-xl);
     font-weight: var(--weight-medium);
     color: var(--brand-green);
-    font-style: italic;
+
 }
 
 .room-card__capacity {
@@ -2431,10 +2445,10 @@ h2 {
 }
 
 .booking-form__title {
-    font-family: var(--font-serif);
+    font-family: var(--font-heading);
     font-size: var(--text-xl);
     font-weight: var(--weight-light);
-    font-style: italic;
+
     color: var(--brand-green);
     margin-top: var(--space-2);
     margin-bottom: var(--space-1);
@@ -2536,10 +2550,10 @@ h2 {
 }
 
 .booking-confirmation__title {
-    font-family: var(--font-serif);
+    font-family: var(--font-heading);
     font-size: var(--text-2xl);
     font-weight: var(--weight-light);
-    font-style: italic;
+
     color: var(--brand-green);
     margin-bottom: var(--space-3);
 }
@@ -2734,7 +2748,7 @@ h2 {
 }
 
 .bento-detail__name {
-    font-family: var(--font-serif);
+    font-family: var(--font-heading);
     font-size: var(--text-3xl);
     font-weight: var(--weight-light);
     color: var(--text-primary);
@@ -2953,7 +2967,7 @@ h2 {
 }
 
 .product-detail__name {
-    font-family: var(--font-serif);
+    font-family: var(--font-heading);
     font-size: clamp(var(--text-3xl), 4vw, var(--text-4xl));
     font-weight: var(--weight-light);
     color: var(--text-primary);
@@ -2962,7 +2976,7 @@ h2 {
 }
 
 .product-detail__price {
-    font-family: var(--font-serif);
+    font-family: var(--font-heading);
     font-size: var(--text-2xl);
     color: var(--brand-green);
     font-weight: var(--weight-normal);
@@ -3117,7 +3131,7 @@ h2 {
 }
 
 .sp-hero__title {
-    font-family: var(--font-serif);
+    font-family: var(--font-heading);
     font-size: var(--text-display);
     font-weight: var(--weight-light);
     color: #ffffff;
@@ -3169,7 +3183,7 @@ h2 {
 }
 
 .sp-heading {
-    font-family: var(--font-serif);
+    font-family: var(--font-heading);
     font-size: var(--text-3xl);
     font-weight: var(--weight-light);
     color: var(--text-primary);
@@ -3182,7 +3196,7 @@ h2 {
 }
 
 .sp-subheading {
-    font-family: var(--font-serif);
+    font-family: var(--font-heading);
     font-size: var(--text-2xl);
     font-weight: var(--weight-light);
     color: var(--text-primary);
@@ -3294,7 +3308,7 @@ h2 {
 }
 
 .sp-facilities__group h4 {
-    font-family: var(--font-serif);
+    font-family: var(--font-heading);
     font-size: var(--text-xl);
     font-weight: var(--weight-regular);
     color: var(--text-primary);
@@ -3330,10 +3344,10 @@ h2 {
 }
 
 .sp-highlight p {
-    font-family: var(--font-serif);
+    font-family: var(--font-heading);
     font-size: var(--text-xl);
     font-weight: var(--weight-light);
-    font-style: italic;
+
     color: var(--text-primary);
     line-height: var(--leading-relaxed);
 }
@@ -3359,7 +3373,7 @@ h2 {
 }
 
 .sp-package__name {
-    font-family: var(--font-serif);
+    font-family: var(--font-heading);
     font-size: var(--text-lg);
     font-weight: var(--weight-regular);
     color: var(--text-primary);
@@ -3408,10 +3422,10 @@ h2 {
 }
 
 .sp-cta__tagline {
-    font-family: var(--font-serif);
+    font-family: var(--font-heading);
     font-size: var(--text-3xl);
     font-weight: var(--weight-light);
-    font-style: italic;
+
     color: var(--text-primary);
     margin-bottom: var(--space-6);
     line-height: var(--leading-snug);

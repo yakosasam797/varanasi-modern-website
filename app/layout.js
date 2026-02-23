@@ -1,12 +1,11 @@
-import { Cormorant_Garamond, DM_Sans } from 'next/font/google';
+import { Outfit, DM_Sans } from 'next/font/google';
 import './globals.css';
 import ErrorBoundary from '@/components/ErrorBoundary';
 
-const cormorant = Cormorant_Garamond({
+const outfit = Outfit({
   subsets: ['latin'],
-  weight: ['300', '400', '500'],
-  style: ['normal', 'italic'],
-  variable: '--font-serif',
+  weight: ['300', '400', '500', '600', '700'],
+  variable: '--font-heading',
   display: 'swap',
 });
 
@@ -28,7 +27,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${cormorant.variable} ${dmSans.variable}`} suppressHydrationWarning>
+    <html lang="en" className={`${outfit.variable} ${dmSans.variable}`} suppressHydrationWarning>
       <body>
         <ErrorBoundary>{children}</ErrorBoundary>
       </body>

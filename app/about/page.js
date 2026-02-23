@@ -137,8 +137,8 @@ export default function AboutPage() {
                         <div className="sp-gallery__item"><Image src="/images/about/img7153.jpg" alt="Forest canopy" fill sizes="33vw" /></div>
                         <div className="sp-gallery__item"><Image src="/images/about/img7188.jpg" alt="Rice paddy workers" fill sizes="33vw" /></div>
                         <div className="sp-gallery__item"><Image src="/images/about/farm-view.jpg" alt="Farm landscape" fill sizes="33vw" /></div>
-                        <div className="sp-gallery__item"><Image src="https://varanashi.com/wp-content/uploads/2019/06/IMG_0810-860x500.jpg" alt="Farm panorama" fill sizes="33vw" /></div>
-                        <div className="sp-gallery__item"><Image src="https://varanashi.com/wp-content/uploads/2019/06/IMG_0197-860x500.jpg" alt="Nature at Varanashi" fill sizes="33vw" /></div>
+                        <div className="sp-gallery__item"><Image src="/images/site/manure.jpg" alt="Farm panorama" fill sizes="33vw" /></div>
+                        <div className="sp-gallery__item"><Image src="/images/site/farm-landscape2.jpg" alt="Nature at Varanashi" fill sizes="33vw" /></div>
                     </div>
                 </div>
             </section>

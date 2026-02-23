@@ -5,15 +5,15 @@ import Image from 'next/image';
 
 const HERO_IMAGES = [
     {
-        src: 'https://varanashi.com/wp-content/uploads/2019/03/LRM_EXPORT_20171203_011748-1-compressed-scaled.jpg',
+        src: '/images/site/hero-1.jpg',
         alt: 'Varanashi organic farm aerial view',
     },
     {
-        src: 'https://varanashi.com/wp-content/uploads/2019/06/LRM_EXPORT_20171203_012007-scaled.jpg',
+        src: '/images/site/hero-2.jpg',
         alt: 'Varanashi swimming pond aerial view',
     },
     {
-        src: 'https://varanashi.com/wp-content/uploads/2019/03/DJI_0026-compressed-scaled.jpg',
+        src: '/images/site/hero-3.jpg',
         alt: 'Varanashi farm buildings aerial view',
     },
 ];

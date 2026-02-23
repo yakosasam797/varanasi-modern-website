@@ -15,7 +15,7 @@ export default function VDRFPage() {
             <Nav />
             <section className="page-header" style={{ minHeight: '50vh' }}>
                 <div className="page-header-bg">
-                    <Image src="https://varanashi.com/wp-content/uploads/2019/06/IMG_0810-860x500.jpg" alt="Research at Varanashi" fill style={{ objectFit: 'cover', filter: 'brightness(0.65) saturate(0.8)' }} sizes="100vw" priority />
+                    <Image src="/images/site/manure.jpg" alt="Research at Varanashi" fill style={{ objectFit: 'cover', filter: 'brightness(0.65) saturate(0.8)' }} sizes="100vw" priority />
                 </div>
                 <div className="page-header-overlay"></div>
                 <div className="page-header-content">
@@ -29,7 +29,7 @@ export default function VDRFPage() {
                 <div className="container-text">
                     <RevealOnScroll className="prose">
                         <p className="text-overline" style={{ marginBottom: 'var(--space-4)' }}>About VDRF</p>
-                        <h2>Pioneering Research in<br /><em className="text-accent">Sustainable Agriculture</em></h2>
+                        <h2>Pioneering Research in<br /><span className="text-accent">Sustainable Agriculture</span></h2>
                         <p className="drop-cap">Varanashi Development and Research Foundation (VDRF) has been at the forefront of organic agriculture research since its inception. VDRF is recognized by the Department of Science and Industrial Research (DSIR), Government of India, as a Scientific and Industrial Research Organization (SIRO) — a testament to the rigor and impact of its work.</p>
                         <p>Dr. Varanashi Krishna Moorthy, the primary founder, has presented papers at IFOAM (International Federation of Organic Agriculture Movements) Congresses and contributed to national and international journals. VDRF&apos;s research covers composting, bio-control, vermicomposting, water harvesting, and multi-crop integration.</p>
                         <p>The research technologies developed at VDRF are field-tested at Varanashi Farms before being advocated for wide-scale adoption, ensuring practical viability at every stage.</p>
@@ -41,7 +41,7 @@ export default function VDRFPage() {
                 <div className="container text-center">
                     <RevealOnScroll>
                         <p className="text-overline" style={{ marginBottom: 'var(--space-4)' }}>Recognition</p>
-                        <h3 className="text-h2"><em className="text-accent">APJ Abdul Kalam Award</em> · DSIR SIRO · IFOAM International · Krishi Panditha</h3>
+                        <h3 className="text-h2"><span className="text-accent">APJ Abdul Kalam Award</span> · DSIR SIRO · IFOAM International · Krishi Panditha</h3>
                         <p style={{ color: 'var(--color-stone)', marginTop: 'var(--space-4)' }}>Recognized nationally and internationally for contributions to sustainable agriculture, organic research, and community development.</p>
                     </RevealOnScroll>
                 </div>

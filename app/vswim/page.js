@@ -15,7 +15,7 @@ export default function VSwimPage() {
             <Nav />
             <section className="page-header" style={{ minHeight: '50vh' }}>
                 <div className="page-header-bg">
-                    <Image src="https://varanashi.com/wp-content/uploads/2019/06/treeshouse-pond-1-860x500.jpg" alt="Natural swimming pond at Varanashi" fill style={{ objectFit: 'cover', filter: 'brightness(0.65) saturate(0.8)' }} sizes="100vw" priority />
+                    <Image src="/images/site/pond.jpg" alt="Natural swimming pond at Varanashi" fill style={{ objectFit: 'cover', filter: 'brightness(0.65) saturate(0.8)' }} sizes="100vw" priority />
                 </div>
                 <div className="page-header-overlay"></div>
                 <div className="page-header-content">
@@ -29,11 +29,11 @@ export default function VSwimPage() {
                 <div className="container">
                     <div className="grid-editorial">
                         <RevealOnScroll direction="left">
-                            <div className="img-editorial"><Image src="https://varanashi.com/wp-content/uploads/2019/06/treeshouse-pond-1-860x500.jpg" alt="Swimming at Varanashi" width={860} height={500} style={{ width: '100%', height: 'auto' }} /></div>
+                            <div className="img-editorial"><Image src="/images/site/pond.jpg" alt="Swimming at Varanashi" width={860} height={500} style={{ width: '100%', height: 'auto' }} /></div>
                         </RevealOnScroll>
                         <RevealOnScroll direction="right" className="prose">
                             <p className="text-overline" style={{ marginBottom: 'var(--space-4)' }}>The Academy</p>
-                            <h2>Swimming in<br /><em className="text-accent">Nature&apos;s Pool</em></h2>
+                            <h2>Swimming in<br /><span className="text-accent">Nature&apos;s Pool</span></h2>
                             <p className="drop-cap">Varanashi Swimming Academy offers year-round aquatic education in two full-size natural swimming ponds with A+ water quality. Headed by Partha Varanashi — a coach for Team India in the 2019 Aquatic World Championships — the academy brings world-class instruction to an extraordinary natural setting.</p>
                             <p>Programs range from learn-to-swim for beginners to advanced competitive training. High-board diving, water slackline, stand-up paddling, and recreational water activities complement the structured swim programs.</p>
                             <p>The natural ponds, fed by the farm&apos;s water harvesting system, offer an unmatched swimming experience — pure water, surrounded by the sounds and serenity of the organic farm.</p>
@@ -46,7 +46,7 @@ export default function VSwimPage() {
                 <div className="container">
                     <RevealOnScroll className="text-center mb-10">
                         <p className="text-overline">Programs</p>
-                        <h2 className="text-display" style={{ marginTop: 'var(--space-4)' }}>From First Splash<br /><em className="text-accent">to Open Water</em></h2>
+                        <h2 className="text-display" style={{ marginTop: 'var(--space-4)' }}>From First Splash<br /><span className="text-accent">to Open Water</span></h2>
                     </RevealOnScroll>
                     <div className="grid grid-3 stagger">
                         {[

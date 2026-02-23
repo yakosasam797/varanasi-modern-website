@@ -15,7 +15,7 @@ export default function VASTPage() {
             <Nav />
             <section className="page-header" style={{ minHeight: '50vh' }}>
                 <div className="page-header-bg">
-                    <Image src="https://varanashi.com/wp-content/uploads/2019/06/IMG_0810-860x500.jpg" alt="VAST Centre" fill style={{ objectFit: 'cover', filter: 'brightness(0.65) saturate(0.8)' }} sizes="100vw" priority />
+                    <Image src="/images/site/manure.jpg" alt="VAST Centre" fill style={{ objectFit: 'cover', filter: 'brightness(0.65) saturate(0.8)' }} sizes="100vw" priority />
                 </div>
                 <div className="page-header-overlay"></div>
                 <div className="page-header-content">
@@ -29,7 +29,7 @@ export default function VASTPage() {
                 <div className="container-text">
                     <RevealOnScroll className="prose">
                         <p className="text-overline" style={{ marginBottom: 'var(--space-4)' }}>About VAST</p>
-                        <h2>Technology for<br /><em className="text-accent">Sustainable Farming</em></h2>
+                        <h2>Technology for<br /><span className="text-accent">Sustainable Farming</span></h2>
                         <p className="drop-cap">VAST Centre (Varanashi Agro-Sustainable Technology Centre) serves as the technology arm of the Varanashi ecosystem. It bridges the gap between traditional agricultural wisdom passed down through generations and modern scientific innovation.</p>
                         <p>VAST focuses on developing practical, affordable, and sustainable technologies that smallholder farmers can adopt. From improved composting tools like the Krishi Mithra Trolley to water-efficient irrigation systems, VAST creates solutions tested on the 100-acre Varanashi farm before being made available to the wider farming community.</p>
                         <p>The centre also conducts training workshops, hosts demonstration events, and collaborates with agricultural universities and development organizations.</p>
@@ -41,7 +41,7 @@ export default function VASTPage() {
                 <div className="container">
                     <RevealOnScroll className="text-center mb-10">
                         <p className="text-overline">Innovations</p>
-                        <h2 className="text-display" style={{ marginTop: 'var(--space-4)' }}>Built for<br /><em className="text-accent">the Field</em></h2>
+                        <h2 className="text-display" style={{ marginTop: 'var(--space-4)' }}>Built for<br /><span className="text-accent">the Field</span></h2>
                     </RevealOnScroll>
                     <div className="grid grid-3 stagger">
                         {[

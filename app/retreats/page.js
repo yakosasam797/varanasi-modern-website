@@ -17,7 +17,7 @@ export default function RetreatsPage() {
             {/* ═══════════ HERO ═══════════ */}
             <section className="sp-hero">
                 <div className="sp-hero__bg">
-                    <Image src="https://varanashi.com/wp-content/uploads/2019/06/IMG_4466_-1-860x500.jpg" alt="Tree house at Varanashi" fill sizes="100vw" priority />
+                    <Image src="/images/site/treehouse-room.jpg" alt="Tree house at Varanashi" fill sizes="100vw" priority />
                 </div>
                 <div className="sp-hero__content">
                     <h1 className="sp-hero__title">Retreats</h1>
@@ -30,7 +30,7 @@ export default function RetreatsPage() {
                 <div className="sp-section__inner">
                     <div className="sp-split">
                         <div className="sp-split__image">
-                            <Image src="https://varanashi.com/wp-content/uploads/2019/06/IMG_4466_-1-860x500.jpg" alt="Devadaru Tree House" fill sizes="50vw" />
+                            <Image src="/images/site/treehouse-room.jpg" alt="Devadaru Tree House" fill sizes="50vw" />
                         </div>
                         <div className="sp-split__text">
                             <p className="sp-overline">Tree Houses</p>
@@ -51,7 +51,7 @@ export default function RetreatsPage() {
                 <div className="sp-section__inner">
                     <div className="sp-split sp-split--reverse">
                         <div className="sp-split__image">
-                            <Image src="https://varanashi.com/wp-content/uploads/2019/06/dorm-860x500.jpg" alt="Dorm accommodation" fill sizes="50vw" />
+                            <Image src="/images/site/dorm-860.jpg" alt="Dorm accommodation" fill sizes="50vw" />
                         </div>
                         <div className="sp-split__text">
                             <p className="sp-overline">Farm Stay</p>
@@ -82,7 +82,7 @@ export default function RetreatsPage() {
                 <div className="sp-section__inner">
                     <div className="sp-split">
                         <div className="sp-split__image">
-                            <Image src="https://varanashi.com/wp-content/uploads/2019/06/IMG_0419-860x500.jpg" alt="Organic retreat" fill sizes="50vw" />
+                            <Image src="/images/site/organic-retreat.jpg" alt="Organic retreat" fill sizes="50vw" />
                         </div>
                         <div className="sp-split__text">
                             <p className="sp-overline">Organic Retreat</p>
@@ -101,7 +101,7 @@ export default function RetreatsPage() {
                 <div className="sp-section__inner">
                     <div className="sp-split sp-split--reverse">
                         <div className="sp-split__image">
-                            <Image src="https://varanashi.com/wp-content/uploads/2019/06/Grafting-3-860x500.jpg" alt="Cacao trail" fill sizes="50vw" />
+                            <Image src="/images/site/grafting.jpg" alt="Cacao trail" fill sizes="50vw" />
                         </div>
                         <div className="sp-split__text">
                             <p className="sp-overline">Cacao Trail</p>
@@ -204,16 +204,16 @@ export default function RetreatsPage() {
                 <div className="sp-section__inner">
                     <p className="sp-overline">Gallery</p>
                     <div className="sp-gallery">
-                        <div className="sp-gallery__item"><Image src="https://varanashi.com/wp-content/uploads/2019/06/Accomodation2-860x500.jpg" alt="Accommodation" fill sizes="33vw" /></div>
-                        <div className="sp-gallery__item"><Image src="https://varanashi.com/wp-content/uploads/2019/06/IMG_20160912_123206-860x500.jpeg" alt="Farm activity" fill sizes="33vw" /></div>
-                        <div className="sp-gallery__item"><Image src="https://varanashi.com/wp-content/uploads/2019/06/IMG_0197-860x500.jpg" alt="Farm landscape" fill sizes="33vw" /></div>
-                        <div className="sp-gallery__item"><Image src="https://varanashi.com/wp-content/uploads/2019/06/IMG_9436-860x500.jpg" alt="Activities" fill sizes="33vw" /></div>
-                        <div className="sp-gallery__item"><Image src="https://varanashi.com/wp-content/uploads/2019/06/IMG_20150816_111555-860x500.jpg" alt="Farm view" fill sizes="33vw" /></div>
-                        <div className="sp-gallery__item"><Image src="https://varanashi.com/wp-content/uploads/2019/06/IMG_0605-860x500.jpg" alt="Outdoor activities" fill sizes="33vw" /></div>
-                        <div className="sp-gallery__item"><Image src="https://varanashi.com/wp-content/uploads/2019/06/IMG_0633-860x500.jpg" alt="Nature" fill sizes="33vw" /></div>
-                        <div className="sp-gallery__item"><Image src="https://varanashi.com/wp-content/uploads/2019/06/treeshouse-pond-1-860x500.jpg" alt="Tree house pond" fill sizes="33vw" /></div>
-                        <div className="sp-gallery__item"><Image src="https://varanashi.com/wp-content/uploads/2019/06/LRM_EXPORT_20171203_005745-860x500.jpg" alt="Retreat moment" fill sizes="33vw" /></div>
-                        <div className="sp-gallery__item"><Image src="https://varanashi.com/wp-content/uploads/2019/06/IMG-20190301-WA0013-860x500.jpg" alt="Farm life" fill sizes="33vw" /></div>
+                        <div className="sp-gallery__item"><Image src="/images/site/accomodation.jpg" alt="Accommodation" fill sizes="33vw" /></div>
+                        <div className="sp-gallery__item"><Image src="/images/site/farm-activity.jpeg" alt="Farm activity" fill sizes="33vw" /></div>
+                        <div className="sp-gallery__item"><Image src="/images/site/farm-landscape2.jpg" alt="Farm landscape" fill sizes="33vw" /></div>
+                        <div className="sp-gallery__item"><Image src="/images/site/activities.jpg" alt="Activities" fill sizes="33vw" /></div>
+                        <div className="sp-gallery__item"><Image src="/images/site/farm-view2.jpg" alt="Farm view" fill sizes="33vw" /></div>
+                        <div className="sp-gallery__item"><Image src="/images/site/vof-aerial.jpg" alt="Outdoor activities" fill sizes="33vw" /></div>
+                        <div className="sp-gallery__item"><Image src="/images/site/outdoor.jpg" alt="Nature" fill sizes="33vw" /></div>
+                        <div className="sp-gallery__item"><Image src="/images/site/pond.jpg" alt="Tree house pond" fill sizes="33vw" /></div>
+                        <div className="sp-gallery__item"><Image src="/images/site/retreat-moment.jpg" alt="Retreat moment" fill sizes="33vw" /></div>
+                        <div className="sp-gallery__item"><Image src="/images/site/farm-life.jpg" alt="Farm life" fill sizes="33vw" /></div>
                     </div>
                 </div>
             </section>

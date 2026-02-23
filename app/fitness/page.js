@@ -16,7 +16,7 @@ export default function FitnessPage() {
             {/* ═══════════ HERO ═══════════ */}
             <section className="sp-hero">
                 <div className="sp-hero__bg">
-                    <Image src="https://varanashi.com/wp-content/uploads/2019/06/DSC5250-860x500.jpg" alt="Fitness at Varanashi" fill sizes="100vw" priority />
+                    <Image src="/images/site/treehouse.jpg" alt="Fitness at Varanashi" fill sizes="100vw" priority />
                 </div>
                 <div className="sp-hero__content">
                     <h1 className="sp-hero__title">Fitness</h1>
@@ -29,7 +29,7 @@ export default function FitnessPage() {
                 <div className="sp-section__inner">
                     <div className="sp-split">
                         <div className="sp-split__image">
-                            <Image src="https://varanashi.com/wp-content/uploads/2019/06/IMG_20151023_082241-860x500.jpeg" alt="Yoga retreat" fill sizes="50vw" />
+                            <Image src="/images/site/yoga-retreat.jpeg" alt="Yoga retreat" fill sizes="50vw" />
                         </div>
                         <div className="sp-split__text">
                             <p className="sp-overline">Yoga Retreat</p>
@@ -51,7 +51,7 @@ export default function FitnessPage() {
                 <div className="sp-section__inner">
                     <div className="sp-split sp-split--reverse">
                         <div className="sp-split__image">
-                            <Image src="https://varanashi.com/wp-content/uploads/2019/06/DSC_8373-860x500.jpg" alt="X-Fitness camp" fill sizes="50vw" />
+                            <Image src="/images/site/nature-remedy.jpg" alt="X-Fitness camp" fill sizes="50vw" />
                         </div>
                         <div className="sp-split__text">
                             <p className="sp-overline">Movement Sports</p>
@@ -73,7 +73,7 @@ export default function FitnessPage() {
                 <div className="sp-section__inner">
                     <div className="sp-split">
                         <div className="sp-split__image">
-                            <Image src="https://varanashi.com/wp-content/uploads/2019/06/FB_IMG_1424521718610-860x500.jpg" alt="Swimming training" fill sizes="50vw" />
+                            <Image src="/images/site/swimming-training.jpg" alt="Swimming training" fill sizes="50vw" />
                         </div>
                         <div className="sp-split__text">
                             <p className="sp-overline">Varanashi Swimming Academy</p>
@@ -147,15 +147,15 @@ export default function FitnessPage() {
                 <div className="sp-section__inner">
                     <p className="sp-overline">Gallery</p>
                     <div className="sp-gallery">
-                        <div className="sp-gallery__item"><Image src="https://varanashi.com/wp-content/uploads/2019/06/IMG_4954-1-860x500.jpg" alt="Activities" fill sizes="33vw" /></div>
-                        <div className="sp-gallery__item"><Image src="https://varanashi.com/wp-content/uploads/2019/06/IMG-20150506-WA0027-860x500.jpg" alt="Training" fill sizes="33vw" /></div>
-                        <div className="sp-gallery__item"><Image src="https://varanashi.com/wp-content/uploads/2019/06/IMG_20151023_083505-860x500.jpeg" alt="Yoga" fill sizes="33vw" /></div>
-                        <div className="sp-gallery__item"><Image src="https://varanashi.com/wp-content/uploads/2019/06/IMG_20150816_111555-860x500.jpg" alt="Farm view" fill sizes="33vw" /></div>
-                        <div className="sp-gallery__item"><Image src="https://varanashi.com/wp-content/uploads/2019/06/IMG_20180111_093840-860x500.jpeg" alt="Swimming" fill sizes="33vw" /></div>
-                        <div className="sp-gallery__item"><Image src="https://varanashi.com/wp-content/uploads/2019/06/P1000734-860x500.jpg" alt="Landscape" fill sizes="33vw" /></div>
-                        <div className="sp-gallery__item"><Image src="https://varanashi.com/wp-content/uploads/2019/06/img_4853-860x500.jpg" alt="Water sports" fill sizes="33vw" /></div>
-                        <div className="sp-gallery__item"><Image src="https://varanashi.com/wp-content/uploads/2019/06/IMG_0810-860x500.jpg" alt="Farm life" fill sizes="33vw" /></div>
-                        <div className="sp-gallery__item"><Image src="https://varanashi.com/wp-content/uploads/2019/06/IMG_0197-860x500.jpg" alt="Nature" fill sizes="33vw" /></div>
+                        <div className="sp-gallery__item"><Image src="/images/site/fitness-activities.jpg" alt="Activities" fill sizes="33vw" /></div>
+                        <div className="sp-gallery__item"><Image src="/images/site/fitness-training.jpg" alt="Training" fill sizes="33vw" /></div>
+                        <div className="sp-gallery__item"><Image src="/images/site/yoga-session.jpeg" alt="Yoga" fill sizes="33vw" /></div>
+                        <div className="sp-gallery__item"><Image src="/images/site/farm-view2.jpg" alt="Farm view" fill sizes="33vw" /></div>
+                        <div className="sp-gallery__item"><Image src="/images/site/swimming-2.jpeg" alt="Swimming" fill sizes="33vw" /></div>
+                        <div className="sp-gallery__item"><Image src="/images/site/landscape.jpg" alt="Landscape" fill sizes="33vw" /></div>
+                        <div className="sp-gallery__item"><Image src="/images/site/farm-landscape.jpg" alt="Water sports" fill sizes="33vw" /></div>
+                        <div className="sp-gallery__item"><Image src="/images/site/manure.jpg" alt="Farm life" fill sizes="33vw" /></div>
+                        <div className="sp-gallery__item"><Image src="/images/site/farm-landscape2.jpg" alt="Nature" fill sizes="33vw" /></div>
                     </div>
                 </div>
             </section>

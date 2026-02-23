@@ -12,7 +12,7 @@ const ROOMS = [
         capacity: '1–2 guests',
         description:
             'A comfortable, no-frills stay for solo travellers and couples. Shared facilities encourage connection with fellow guests in the heart of the farm.',
-        img: 'https://varanashi.com/wp-content/uploads/2019/06/IMG_0605-860x500.jpg',
+        img: '/images/site/vof-aerial.jpg',
         alt: 'Room with Shared Bathroom at Varanashi',
     },
     {
@@ -22,7 +22,7 @@ const ROOMS = [
         capacity: '1 guest',
         description:
             'Handbuilt from the very clay that grows our crops. Cool in summer, warm in monsoon. A private haven for solo retreat-seekers.',
-        img: 'https://varanashi.com/wp-content/uploads/2022/12/Cottage_1-300x300.jpg',
+        img: '/images/site/cottage.jpg',
         alt: 'Mud Cottage single occupancy',
     },
     {
@@ -32,7 +32,7 @@ const ROOMS = [
         capacity: '2 guests',
         description:
             'The same earthy elegance, sized for two. Share morning coffee on the porch as the farm wakes around you.',
-        img: 'https://varanashi.com/wp-content/uploads/2022/12/Cottage_1-300x300.jpg',
+        img: '/images/site/cottage.jpg',
         alt: 'Mud Cottage double occupancy',
     },
     {
@@ -42,7 +42,7 @@ const ROOMS = [
         capacity: 'Up to 4 guests',
         description:
             'No tree was pierced. Built from farm-grown teak, rosewood, acacia, and jackfruit. Ultimate privacy in the canopy — a testament to building with nature.',
-        img: 'https://varanashi.com/wp-content/uploads/2019/06/DSC5250-860x500.jpg',
+        img: '/images/site/treehouse.jpg',
         alt: 'Devadaru Tree House at Varanashi',
     },
 ];

@@ -15,7 +15,7 @@ export default function StokedPage() {
             <Nav />
             <section className="page-header" style={{ minHeight: '50vh' }}>
                 <div className="page-header-bg">
-                    <Image src="https://varanashi.com/wp-content/uploads/2019/06/WhatsApp-Image-2019-06-25-at-08.55.02-860x500.jpeg" alt="Skateboarding at Varanashi" fill style={{ objectFit: 'cover', filter: 'brightness(0.65) saturate(0.8)' }} sizes="100vw" priority />
+                    <Image src="/images/site/vol-1.jpeg" alt="Skateboarding at Varanashi" fill style={{ objectFit: 'cover', filter: 'brightness(0.65) saturate(0.8)' }} sizes="100vw" priority />
                 </div>
                 <div className="page-header-overlay"></div>
                 <div className="page-header-content">
@@ -29,7 +29,7 @@ export default function StokedPage() {
                 <div className="container-text">
                     <RevealOnScroll className="prose">
                         <p className="text-overline" style={{ marginBottom: 'var(--space-4)' }}>About Stoked</p>
-                        <h2>Adventure Rooted<br /><em className="text-accent">in Farm Life</em></h2>
+                        <h2>Adventure Rooted<br /><span className="text-accent">in Farm Life</span></h2>
                         <p className="drop-cap">Stoked India Adventures is the action sports arm of the Varanashi ecosystem. Founded by Partha Varanashi — athlete, coach, and youngest heir to the Varanashi legacy — Stoked brings skateboarding, surfing, mountain biking, and outdoor adventure to the farm grounds.</p>
                         <p>The farm features a dedicated skate park built alongside the dormitories, offering a unique combination of agricultural serenity and extreme sport energy. MTB trails wind through the 100-acre property, and surfing trips are organized to nearby coastal breaks.</p>
                         <p>Stoked celebrates the idea that a life connected to the land can be exhilarating — that organic farming and action sports aren&apos;t opposites, but expressions of the same love for nature and movement.</p>
@@ -41,7 +41,7 @@ export default function StokedPage() {
                 <div className="container">
                     <RevealOnScroll className="text-center mb-10">
                         <p className="text-overline">Activities</p>
-                        <h2 className="text-display" style={{ marginTop: 'var(--space-4)' }}>Get<br /><em className="text-accent">Stoked</em></h2>
+                        <h2 className="text-display" style={{ marginTop: 'var(--space-4)' }}>Get<br /><span className="text-accent">Stoked</span></h2>
                     </RevealOnScroll>
                     <div className="grid grid-3 stagger">
                         {[

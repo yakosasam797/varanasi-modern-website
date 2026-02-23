@@ -17,7 +17,7 @@ export default function ShopPage() {
 
             <section className="page-header">
                 <div className="page-header-bg">
-                    <Image src="https://varanashi.com/wp-content/uploads/2019/03/image00002-scaled-300x300.jpeg" alt="Organic produce from Varanashi" fill style={{ objectFit: 'cover', filter: 'brightness(0.65) saturate(0.8)' }} sizes="100vw" priority />
+                    <Image src="/images/products/cacao-beans.jpeg" alt="Organic produce from Varanashi" fill style={{ objectFit: 'cover', filter: 'brightness(0.65) saturate(0.8)' }} sizes="100vw" priority />
                 </div>
                 <div className="page-header-overlay"></div>
                 <div className="page-header-content">
@@ -27,11 +27,11 @@ export default function ShopPage() {
                 </div>
             </section>
 
-            <section className="section-cream" style={{ padding: 'var(--space-12) 0' }}>
+            <section className="section-cream" style={{ padding: 'var(--space-5) 0' }}>
                 <div className="container-text text-center">
                     <RevealOnScroll>
-                        <p className="text-overline" style={{ marginBottom: 'var(--space-4)' }}>Curated Collection</p>
-                        <h2 className="text-h2">Certified organic produce from our centuries-old farm — <em className="text-accent">spices, cacao, honey, rice, and farm inputs.</em></h2>
+                        <p className="text-overline" style={{ marginBottom: 'var(--space-2)' }}>Curated Collection</p>
+                        <p style={{ fontSize: 'clamp(1rem, 2vw, 1.25rem)', lineHeight: 1.6, color: 'var(--color-stone)' }}>Certified organic produce from our centuries-old farm — <span className="text-accent" style={{ fontWeight: 500 }}>spices, cacao, honey, rice, and farm inputs.</span></p>
                     </RevealOnScroll>
                 </div>
             </section>

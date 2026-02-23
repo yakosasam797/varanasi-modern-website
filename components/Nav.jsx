@@ -2,6 +2,7 @@
 
 import { useEffect, useState, useRef } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 /* ── One consistent set of links for ALL pages ── */
 const NAV_LINKS = [
@@ -109,6 +110,13 @@ export default function Nav({ isHomepage = false }) {
             <nav className="nav" id="main-nav" ref={navRef}>
                 <div className="nav-inner">
                     <Link href="/" className="nav-wordmark">
+                        <Image
+                            src="/images/Logo icon.png"
+                            alt="Varanashi logo"
+                            width={32}
+                            height={32}
+                            className="nav-logo"
+                        />
                         Varanashi
                     </Link>
                     <div className="nav-links">

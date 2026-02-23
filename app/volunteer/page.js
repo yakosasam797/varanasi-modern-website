@@ -16,7 +16,7 @@ export default function VolunteerPage() {
             {/* ═══════════ HERO ═══════════ */}
             <section className="sp-hero">
                 <div className="sp-hero__bg">
-                    <Image src="https://varanashi.com/wp-content/uploads/2019/03/img_8242-compressed-1.jpg" alt="Volunteering at Varanashi" fill sizes="100vw" priority />
+                    <Image src="/images/site/volunteer-hero.jpg" alt="Volunteering at Varanashi" fill sizes="100vw" priority />
                 </div>
                 <div className="sp-hero__content">
                     <h1 className="sp-hero__title">Volunteering</h1>
@@ -29,7 +29,7 @@ export default function VolunteerPage() {
                 <div className="sp-section__inner">
                     <div className="sp-split">
                         <div className="sp-split__image">
-                            <Image src="https://varanashi.com/wp-content/uploads/2019/06/volunteers.jpg" alt="Volunteers at Varanashi" fill sizes="50vw" />
+                            <Image src="/images/site/volunteers.jpg" alt="Volunteers at Varanashi" fill sizes="50vw" />
                         </div>
                         <div className="sp-split__text">
                             <p className="sp-overline">At Varanashi</p>
@@ -50,7 +50,7 @@ export default function VolunteerPage() {
                 <div className="sp-section__inner">
                     <div className="sp-split sp-split--reverse">
                         <div className="sp-split__image">
-                            <Image src="https://varanashi.com/wp-content/uploads/2019/03/IMG_20181219_112614-1-compressed.jpg" alt="Farm work at Varanashi" fill sizes="50vw" />
+                            <Image src="/images/site/farm-work.jpg" alt="Farm work at Varanashi" fill sizes="50vw" />
                         </div>
                         <div className="sp-split__text">
                             <p className="sp-overline">Get Involved</p>
@@ -94,7 +94,7 @@ export default function VolunteerPage() {
                 <div className="sp-section__inner">
                     <div className="sp-split">
                         <div className="sp-split__image">
-                            <Image src="https://varanashi.com/wp-content/uploads/2019/06/dorm.jpg" alt="Volunteer accommodation at Varanashi" fill sizes="50vw" />
+                            <Image src="/images/site/dorm.jpg" alt="Volunteer accommodation at Varanashi" fill sizes="50vw" />
                         </div>
                         <div className="sp-split__text">
                             <p className="sp-overline">What&apos;s Included</p>
@@ -131,14 +131,14 @@ export default function VolunteerPage() {
                 <div className="sp-section__inner">
                     <p className="sp-overline">Volunteer Life</p>
                     <div className="sp-gallery">
-                        <div className="sp-gallery__item"><Image src="https://varanashi.com/wp-content/uploads/2019/06/WhatsApp-Image-2019-06-25-at-08.55.02-860x500.jpeg" alt="Volunteer life" fill sizes="33vw" /></div>
-                        <div className="sp-gallery__item"><Image src="https://varanashi.com/wp-content/uploads/2019/06/img_8269-860x500.jpg" alt="Farm work" fill sizes="33vw" /></div>
-                        <div className="sp-gallery__item"><Image src="https://varanashi.com/wp-content/uploads/2019/06/WhatsApp-Image-2019-06-25-at-08.55.08-860x500.jpeg" alt="Community" fill sizes="33vw" /></div>
-                        <div className="sp-gallery__item"><Image src="https://varanashi.com/wp-content/uploads/2019/06/WhatsApp-Image-2019-06-25-at-08.55.04-860x500.jpeg" alt="Activities" fill sizes="33vw" /></div>
-                        <div className="sp-gallery__item"><Image src="https://varanashi.com/wp-content/uploads/2019/06/WhatsApp-Image-2019-06-25-at-08.55.06-860x500.jpeg" alt="Farming" fill sizes="33vw" /></div>
-                        <div className="sp-gallery__item"><Image src="https://varanashi.com/wp-content/uploads/2019/06/WhatsApp-Image-2019-06-25-at-08.55.09-860x500.jpeg" alt="Group activities" fill sizes="33vw" /></div>
-                        <div className="sp-gallery__item"><Image src="https://varanashi.com/wp-content/uploads/2019/06/WhatsApp-Image-2019-06-25-at-08.55.03-784x500.jpeg" alt="Nature" fill sizes="33vw" /></div>
-                        <div className="sp-gallery__item"><Image src="https://varanashi.com/wp-content/uploads/2019/06/WhatsApp-Image-2019-06-25-at-08.55.05-860x500.jpeg" alt="Volunteering at Varanashi" fill sizes="33vw" /></div>
+                        <div className="sp-gallery__item"><Image src="/images/site/vol-1.jpeg" alt="Volunteer life" fill sizes="33vw" /></div>
+                        <div className="sp-gallery__item"><Image src="/images/site/vol-2.jpg" alt="Farm work" fill sizes="33vw" /></div>
+                        <div className="sp-gallery__item"><Image src="/images/site/vol-3.jpeg" alt="Community" fill sizes="33vw" /></div>
+                        <div className="sp-gallery__item"><Image src="/images/site/vol-4.jpeg" alt="Activities" fill sizes="33vw" /></div>
+                        <div className="sp-gallery__item"><Image src="/images/site/vol-5.jpeg" alt="Farming" fill sizes="33vw" /></div>
+                        <div className="sp-gallery__item"><Image src="/images/site/vol-6.jpeg" alt="Group activities" fill sizes="33vw" /></div>
+                        <div className="sp-gallery__item"><Image src="/images/site/vol-7.jpeg" alt="Nature" fill sizes="33vw" /></div>
+                        <div className="sp-gallery__item"><Image src="/images/site/vol-8.jpeg" alt="Volunteering at Varanashi" fill sizes="33vw" /></div>
                     </div>
                 </div>
             </section>
